@@ -50,7 +50,7 @@
                     as[active].className = 'active';
                 }
             });
-        } else if (sele == 2) {
+        } else if (sele == 2) {                 //含pagenavi
             var N = "&jhk&slider2&true&oop&4000";
             var nav = N.split("&");
             var u = new TouchSlider({
@@ -96,21 +96,12 @@
         // })
     }
 
+$(function(){
     if ($('.tbanner').attr('data-wipe') !== undefined) {
         tc();
     }
+})
 
-    // //right-directory
-    // function rtSiderbar() {
-    //     $("#rt-sider").on("click", function() {
-    //         $(this).toggleClass("hub-btn-show");
-    //         $(this).parent().toggleClass("aside_more")
-
-    //     })
-    // }
-    // if($('body').find("#rt-sider")){
-    //     rtSiderbar();
-    // }
 
     //detail-toggle
     $(".detail-toggle").each(function(e) {
@@ -133,30 +124,6 @@
 
     //comment-image
 
-    /*    if ($(".comment-main .pics").length > 0) {
-            var commentPic = $(".pics")
-            commentPic.reviewImage({
-                "event": "touchstart"
-            });
-        }*/
-
-    //hub center
-    // $("#hub-menu").on("click", function(event) {
-    //     var md = $(".hub-wrapper .mid")
-    //      $("#hub-menu").toggle(function() {
-    //         md.css({
-    //             "-webkit-transform": "translateX(-100%)",
-    //             transition: "400ms",
-    //             "-webkit-transition": "400ms"
-    //         }, function() {
-    //             md.css({
-    //                 "-webkit-transform": "translateX(0%)",
-
-    //             })
-    //         })
-    //     })
-
-    // })
 
     $("#hub-menu").on("click", function(event) {
         var md = $(".hub-wrapper .mid")
@@ -169,14 +136,7 @@
 
     //start
     $(function() {
-        //Sequence button
-        /*    $(".tab-collate-icon").click(function(){
-                if($(this).find("i").hasClass("sorting-arrow")){
-                    $(this).find("i").addClass("sorting-arrow-ascending").removeClass("sorting-arrow")
-                }else{
-                    $(this).find("i").addClass("sorting-arrow").removeClass("sorting-arrow-ascending")
-                }
-            })*/
+
         $("#hotsearchTab li").on("taphold", function() {
             if ($(this).find("i").hasClass("sorting-arrow")) {
                 $(this).find("i").addClass("sorting-arrow-ascending").removeClass("sorting-arrow")

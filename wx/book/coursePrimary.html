@@ -40,7 +40,10 @@
             </div>
             <div class="footOption">
                 <span class="stateText"><a class="btn" href="javascript:;"></a></span>
-                <span class="stateText"><a class="btn" href="javascript:;"></a></span>
+                <span class="stateText"><a class="btn order-btn" href="javascript:;"></a></span>
+            </div>
+            <div id="share" onclick="closeshare()">
+                <div class="shareImg"><img src="../script/images/member/point/share-act_03.png" alt=""></div>
             </div>
         </main>
     </div>
@@ -49,6 +52,33 @@
     <script src="../script/plugin/layer/layer.m.js"></script>
     <script src="../script/js/global.js"></script>
     <script src="../script/js/web.js"></script>
+    <script>
+    //预约提醒
+    $(".order-btn").on("click", function(event) {
+        event.preventDefault();
+        var common = "<div class=\"receive-success plt10\"><img src=\"../script/images/member/point/check_layer.png\" class=\"check-true\"><span>预约成功<br/>请您到门店进行支付</span><a class=\"btn btn-full-orange btn-share\">把好消息推送给好友</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\">"
+        common += "</div></div>"
+
+
+        var cou1 = layer.open({
+            type: 1,
+            content: common, 
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn").click(function() {
+                    layer.close(cou1);
+                    $("body").removeClass("model-open")
+                })
+                $(".btn-share").on("click", function(e) {
+                    e.preventDefault();
+                    layer.close(cou1)
+                    sharelog();
+                })
+            }
+        })
+    })
+    </script>
 </body>
 
 </html>

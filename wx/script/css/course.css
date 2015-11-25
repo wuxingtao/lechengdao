@@ -60,6 +60,11 @@
   width: 48%;
   float: left;
 }
+.coursePrimay .footOption .stateText a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 .coursePrimay .footOption .stateText:first-child {
   background: url(../images/lib/course/course_btn_04.png) no-repeat;
   background-size: 100% 100%;
@@ -70,6 +75,55 @@
   background: url(../images/lib/course/course_btn_06.png) no-repeat;
   background-size: 100% 100%;
   height: 50px;
+}
+
+.receive-success {
+  padding: 10px 15px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.receive-success .check-true {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  display: block;
+  margin: 0 auto;
+}
+.receive-success span {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.receive-success .btn-full-orange {
+  background-color: #ff7800;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 100%;
+  margin: 10px auto;
+}
+.receive-success .btn-white {
+  background-color: #fff;
+  color: #434343;
+  width: 40%;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+.receive-success .btn-blue {
+  background-color: #3b85ff;
+  color: #fff;
+  width: 40%;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+.receive-success .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.receive-success .close-btn img {
+  width: 20px;
+  height: 20px;
 }
 
 /*# sourceMappingURL=course.css.map */

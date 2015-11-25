@@ -2,80 +2,82 @@
 @import "compass/css3";
 @import "compass/layout/stretching";
 @import "compass/utilities/sprites";
+@import 'xt_mixin';
 $fontPrice:#ff6c00;
 $themeColor:#03b8d5;
 $gray:#333;
 
 /* index */
-.index_wrapper{
-    .le-content{
+
+.index_wrapper {
+    .le-content {
         // background:url(../images/lechen/index_bg_03.png) no-repeat left bottom;
         // background-size: 100%;
-        background:url(../images/lechen/index_bg_02.png) repeat-y;
-        background-size:100%;
-        .le-lump{
-            background:url(../images/lechen/index_bg_02.png) repeat-y;
-            background-size:100%;
-            padding:5px;
+        background: url(../images/lechen/index_bg_02.png) repeat-y;
+        background-size: 100%;
+        .le-lump {
+            background: url(../images/lechen/index_bg_02.png) repeat-y;
+            background-size: 100%;
+            padding: 5px;
             position: relative;
             z-index: 150;
         }
-        .le-heading{
+        .le-heading {
             width: 70%;
             margin: 0 auto;
-            position:relative;
+            position: relative;
             margin-bottom: 40%;
-            .le-logo{
+            .le-logo {
                 position: absolute;
                 left: 0;
                 right: 0;
                 top: -60px;
             }
         }
-        .le-lists{
-            margin-bottom:0;
-            li{
-                width:100%;
+        .le-lists {
+            margin-bottom: 0;
+            li {
+                width: 100%;
                 height: 70px;
-                margin:-33px auto 0;
-                position:relative;
-                a{
+                margin: -33px auto 0;
+                position: relative;
+                a {
                     text-indent: -999rem;
-                    padding:0 30px;
+                    padding: 0 30px;
                 }
-                &:nth-child(even){
-                    a{
-                        float:left;
+                &:nth-child(even) {
+                    a {
+                        float: left;
                     }
                 }
-                &:nth-child(odd){
-                    a{
-                        float:right;
+                &:nth-child(odd) {
+                    a {
+                        float: right;
                     }
                 }
             }
-            @mixin item-bg{
-
-            }
-            @each $ibg in(bg1,bg2,bg3,bg4,bg5,bg6){
-                .item-#{$ibg}{
+            @mixin item-bg {}
+            @each $ibg in(bg1, bg2, bg3, bg4, bg5, bg6) {
+                .item-#{$ibg} {
                     background:url(../images/lechen/img/#{$ibg}.png) no-repeat;
                     background-size: 100%;
                 }
             }
-            @each $wid,$width in(bg1:78%,bg2:82%,bg3:86%,bg4:90%,bg5:94%,bg6:98%){
-                .item-#{$wid}{
-                    width:$width;
+            @each $wid,
+            $width in(bg1:78%, bg2:82%, bg3:86%, bg4:90%, bg5:94%, bg6:98%) {
+                .item-#{$wid} {
+                    width: $width;
                 }
             }
-            @each$ibg,$zin in(bg1:100,bg2:101,bg3:102,bg4:103,bg5:104,bg6:105) {
-                .item-#{$ibg}{
-                    z-index:$zin;
+            @each$ibg,
+            $zin in(bg1:100, bg2:101, bg3:102, bg4:103, bg5:104, bg6:105) {
+                .item-#{$ibg} {
+                    z-index: $zin;
                 }
             }
         }
     }
-    .le-foot{
+    .le-foot {
         // margin-top: -44px;
         z-index: 200;
         position: relative;
@@ -86,10 +88,9 @@ $gray:#333;
 }
 
 
-
 /* img-bg */
-// $bgs: sprite-map("../images/lechen/img/*.png", $spacing: 5px, $layout: vertical);
 
+// $bgs: sprite-map("../images/lechen/img/*.png", $spacing: 5px, $layout: vertical);
 // @each $iname in(bg1, bg2, bg3, bg4, bg5, bg6) {
 //     .item-#{$iname} {
 //         margin: auto;
@@ -103,17 +104,19 @@ $gray:#333;
 // }
 
 /* 音频试听 */
-.listen-bg{
-    background:url(../images/lib/view/view-bg.jpg) no-repeat;
+
+.listen-bg {
+    background: url(../images/lib/view/view-bg.jpg) no-repeat;
     background-size: 100%;
 }
-.audition-lists{
-    li{
+
+.audition-lists {
+    li {
         position: relative;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 10px 10px 10px 100px;
         margin-bottom: 8px;
-        &:after{
+        &:after {
             content: '';
             position: absolute;
             bottom: -2px;
@@ -124,7 +127,7 @@ $gray:#333;
             height: 6px;
         }
     }
-    .proPhoto{
+    .proPhoto {
         width: 120px;
         display: inline-block;
         position: absolute;
@@ -132,82 +135,170 @@ $gray:#333;
         height: 60px;
         left: 10px;
         top: 10px;
-        .theme-img{
-            width:60px;
-            height:60px;
-            position:relative;
-            .artist-img{
+        .theme-img {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            .artist-img {
                 position: relative;
                 z-index: 10;
             }
-            .play-cd{
-                position:absolute;
-                top:0;
-                right:-50%;
+            .play-cd {
+                position: absolute;
+                top: 0;
+                right: -50%;
                 width: 100%;
                 height: 100%;
                 z-index: 5;
             }
-            .play-round-btn{
-                width:30px;
-                height:30px;
-                position:absolute;
-                top:0;
-                bottom:0;
-                left:0;
-                right:0;
+            .play-round-btn {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
                 margin: auto;
-                background:url(../images/lib/view/orange-play.png) no-repeat;
+                background: url(../images/lib/view/orange-play.png) no-repeat;
                 background-size: 100%;
                 z-index: 50;
             }
         }
     }
-    .privatCont{
-        .btnplay{
+    .privatCont {
+        .btnplay {
             color: #ff7800;
             display: table-cell;
             vertical-align: middle;
             max-width: 50px;
             text-align: center;
-            i{
+            i {
                 font-size: 2rem;
             }
-            em{
-                display:block;
+            em {
+                display: block;
                 white-space: nowrap;
             }
         }
-        .listen-cont{
+        .listen-cont {
             display: table-cell;
             vertical-align: middle;
             width: 100%;
             padding-left: 20px;
-            h3{
-                color:#404040;
+            h3 {
+                color: #404040;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                font-size:1.5rem;
+                font-size: 1.5rem;
                 display: inline-block;
                 white-space: nowrap;
                 max-width: 150px;
                 margin-top: 10px;
+                @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+                    max-width: 150px;
+                }
+                @media only screen and (min-device-width: 375px) and (max-device-width: 568px) and (orientation: portrait) {
+                    max-width: 200px;
+                }
+            }
+            p {
+                color: #898989;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+
+/* 活动 */
+
+.activity-wrapper {
+    .applink-zoom {
+        ul {
+            @include displayflex;
+            margin-bottom:0;
+        }
+        .recomment-item {
+            position: relative;
+            @include flex(1);
+            &:nth-of-type(2) {
+                margin: 0 5px;
+            }
+            @mixin slogan {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -3px;
+                width: 65px;
+                height: 25px;
+                background: url(../images/lechen/images/slogan.png) no-repeat;
+                background-size: 100%;
+            }
+            &.slogan1:before {
+                @include slogan;
+                background-position: 0 0;
+            }
+            &.slogan2:before {
+                @include slogan;
+                background-position: 0 -27px;
+            }
+            &.slogan3:before {
+                @include slogan;
+                background-position: 0 -54px;
+            }
+        }
+    }
+    //往期活动
+    .present-activety {
+        .present-heading {
+            color: #a0a0a0;
+            border-bottom: 1px solid #ddd;
+            padding:5px 0 5px 10px;
+        }
+        .present-item {
+            display: table;
+            width: 100%;
+        }
+        .proPhoto {
+            width: 80px;
+            height: 80px;
+            display: table-cell;
+            vertical-align: middle;
+            min-width: 80px;
+        }
+        .privatCont {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            padding-left: 10px;
+            dt {
+                color: #4e4e4e;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 @media only screen 
                 and (min-device-width : 320px) 
                 and (max-device-width : 568px) 
                 and (orientation : portrait) { 
-                max-width:150px;
+                max-width:200px;
                 }
                 @media only screen 
                 and (min-device-width : 375px) 
                 and (max-device-width : 568px) 
                 and (orientation : portrait) { 
-                max-width:200px;
+                max-width:250px;
                 }
             }
-            p{
-                color:#898989;
-                font-size:1.2rem;
+            dd {
+                color: #b7b7b7;
+            }
+            .preview-cont {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
             }
         }
     }

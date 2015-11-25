@@ -65,30 +65,6 @@ $(function() {
 
 
 
-/*    //collect
-    if ($("body").find(".heart_collect")) {
-        heartfill();
-    }*/
-
-    // procontent
-    /*    $(".heart_collect").on('click', function() {
-                $(".icon-heart").toggleClass("icon-heart-down");
-                if ($(".icon-heart").hasClass("icon-heart-down")) {
-                    $(this).find("span").css("color", "#ffae00")
-                } else {
-                    $(this).find("span").css("color", "inherit")
-                }
-            })*/
-
-    //swipe banner
-
-    // $('.banners-container').each(function() {
-    //     $(this).swiper({
-    //         slidesPerView: 'auto',
-    //         offsetPxBefore: 5,
-    //         offsetPxAfter: -300,
-    //     })
-    // })
 
 
     function idan(o) {
@@ -123,38 +99,11 @@ $(function() {
 
 
 
-    //     //载入
-    // function firstload() {
-    //     var wp = $(".cjBox");
-    //     wp.addClass("slideLeft");
-    //     wp.on('webkitAnimationEnd', function() {
-    //         wp.off('webkitAnimationEnd')
-    //     })
-    // }
-    // //
-    // function footerCome() {
-    //     var c = $(".nav-footer");
-    //     c.addClass("footerCome");
-    //     c.on('webkitAnimationEnd', function() {
-    //         c.removeClass("footerCome")
-    //         c.off("webkitAnimationEnd")
-    //     })
-    // }
-
-
-    // window.onload = function() {
-    //     footerCome();
-    //     firstload()
-    // }
-
-
 })
 
 /*
  * common
  */
-
-//collect
 
 //interval
 function interval() {
