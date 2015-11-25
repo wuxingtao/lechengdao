@@ -84,7 +84,7 @@ $themeColor:#03b8d5;
         }
     }
 }
-// layer提醒
+// layer-warming
 .receive-success {
     padding: 10px 15px;
     text-align: center;
@@ -131,5 +131,124 @@ $themeColor:#03b8d5;
             width: 20px;
             height: 20px;
         }
+    }
+}
+
+/* 课程报名 */
+.course-enroll-wrapper{
+    background: url(../images/lib/course/form-course_bg_01.png) repeat;
+    background-size: 100%;
+}
+.course-explain-heading{
+    color:#79705a;
+    width:80%;
+    margin: 30px auto 20px;
+    text-align:center;
+}
+form.course-enroll{
+    background-color: rgba(255,255,255,.6);
+    border-radius:4px;
+    padding: 10px 10px;
+    margin: 0 15px;
+    dl{
+        background-color: #fff;
+        border-radius:2px;
+    }
+    dd{
+        padding:10px 15px;
+        &:nth-of-type(1){
+            input{
+                background-color: #fffdea;
+                &::-webkit-input-placeholder{
+                    color:#a39e90 !important;
+                }
+                &::-moz-placeholder{
+                    color:#a39e90 !important;
+                }
+                &::-ms-input-placeholder{
+                    color:#a39e90 !important;
+                }
+
+            }
+        }
+        &:nth-of-type(2){
+            input{
+                background-color: #e9efd7;
+                &::-webkit-input-placeholder{
+                    color:#979e88 !important;
+                }
+                &::-moz-placeholder{
+                    color:#979e88 !important;
+                }
+                &::-ms-input-placeholder{
+                    color:#979e88 !important;
+                }
+            }
+        }
+        &:nth-of-type(3){
+            input{
+                background-color: #e0d9f2;
+                &::-webkit-input-placeholder{
+                    color:#9485bc !important;
+                }
+                &::-moz-placeholder{
+                    color:#9485bc !important;
+                }
+                &::-ms-input-placeholder{
+                    color:#9485bc !important;
+                }
+            }
+        }
+        input{
+            border-radius:8px;
+            border:1px solid #f7f4d9;
+        }
+        &:last-child{
+            text-align:center;
+        }
+    }
+    .form-title{
+        font-size:1.6rem;
+        color:#96a27c;
+        border-bottom: 1px solid #e5e8dd;
+        text-align: center;
+        line-height: 4rem;
+        margin: 0 20% 20px;
+    }
+    .sex-item{
+        color:#9a927f;
+        padding: 0 10px;
+    }
+    .icon-xt-check{
+        background: url(../images/icon-gray/xt-radio-check1.png) no-repeat;
+        background-position: 0px 0px;
+        background-size: 60px;
+        color: #333333;
+        cursor: default;
+        display: inline-block;
+        font-family: 'Microsoft YaHei';
+        font-size: 1.5rem;
+        font-style: italic;
+        width: 25px;
+        height: 25px;
+        line-height: 24px;
+        vertical-align: bottom;
+    }
+    .sel{
+        .icon-xt-check{
+            background-position: -30px 0;
+        }
+    }
+}
+.confirm-enroll-btn{
+    background:url(../images/lib/course/course-btn-confirm.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    height:50px;
+    margin:30px 10px;
+    a{
+        width:100%;
+        height:100%;
+        display:block;
+        text-indent:999rem;
     }
 }
