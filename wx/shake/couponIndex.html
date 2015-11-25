@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>优惠券摇一摇</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/page.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/activety.css">
+    <link rel="stylesheet" href="../script/css/active/style-animate.css">
+    <style>
+    html {
+        background: url(../script/images/activity/sk1/shake_bg.png) no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+    
+    .layer_center {
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-align: center;
+        /* IE 10 */
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    
+    .shake-area {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        bottom: 10%;
+    }
+    
+    .shake-outside {
+        width: 75%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .shake-circle{
+        z-index: 99;
+    }
+    .shake-innerside {
+        position: absolute;
+        width: 73%;
+        height: 73%;
+        z-index: 100;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 100;
+        background-color: #fff;
+        border-radius: 100%;
+        border: 1px solid #e5e5e5;
+        overflow: hidden;
+        padding: 33px;
+        /*    background:url(../script/images/activity/sk1/gesture_phone_03.png) center center no-repeat;
+    background-size:50%;*/
+    }
+    
+    .shake-innerside img {
+        /*    width:50%;*/
+        margin-top: 0px;
+    }
+    
+    .shake-text {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        bottom: -20px;
+    }
+    
+    .shake-text img {
+        width: 50%;
+    }
+
+
+    </style>
+</head>
+
+<body class="mhome">
+    <div class="vwport">
+        <main class="contentMain layer_center">
+            <div class="shake-area">
+                <div class="shake-outside">
+                    <div class="shake-circle"><img src="../script/images/activity/sk1/outside-circle_03.png" alt=""></div>
+                    <div class="shake-innerside"><img src="../script/images/activity/sk1/gesture_phone_03.png" alt=""></div>
+                </div>
+                <div class="shake-text">
+                    <img src="../script/images/activity/sk1/shake_note_03.png" alt="">
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- 抽奖结果 -->
+    <div class="cd-coupon hide">
+        <div class="hanging-part">
+            <div class="hang-bg">
+                <img src="../script/images/activity/sk1/hanging-bg_02.png" alt="">
+            </div>
+            <div class="hang-content">
+                <div class="hang-cont1">
+                    <dl>
+                        <dt>xxoo店 优惠券</dt>
+                        <dd>2015.11.11-2015.12.12</dd>
+                        <dd class="coupon-num">10元</dd>
+                        <dd>满100元使用</dd>
+                    </dl>
+                    <a class="hang-share btn-share">邀请好友参与活动</a>
+                </div>
+                <div class="hang-cont2"><a class="btn" onclick="layer.closeAll();layer.open({content:'领取成功'})">点击领取</a></div>
+                <div class="hang-close"><a class="btn"><img src="../script/images/activity/sk1/hanging-close.png" ></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="share" onclick="closeshare()">
+          <div class="shareImg"><img src="../script/images/member/point/share-act_03.png" alt=""></div>
+      </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/layer/layer.m1.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script src="../script/js/library/advance.js"></script>
+    <script type="text/javascript">
+$(function(){
+
+
+//
+    $(".shake-innerside").on("click",function(e){
+        e.preventDefault();
+
+        // $(".shake-innerside img").addClass("animated");
+        action();
+        
+        //layer
+        setTimeout(function(){
+            var hang=$(".cd-coupon").html()
+            // $(".cd-coupon").remove();
+            var hang=layer.open({
+                content: hang,
+                className:'coupon-raffle modal-fl-top',
+                anim: false,
+                shadeClose:false,
+                style:'width:100%;position:fixed;top:0;left:0;z-index:10000;background:transparent;max-width: initial;min-width: initial;padding-bottom: 120px;box-shadow: none;',
+                success:function(){
+                    //关闭按钮
+                    $(".hang-close").click(function(){
+                        $(".modal-fl-top").removeClass("in")
+                            layer.close(hang)
+                    })
+                    //分享按钮
+                    $(".btn-share").on("click", function(e) {
+                        e.preventDefault();
+                        $(".modal-fl-top").removeClass("in")
+                        layer.close(hang)
+                        sharelog();
+                    })
+                }
+            })
+
+            setTimeout(function() {
+                $(".modal-fl-top").addClass("in")
+            }, 100)
+        },500)
+
+    })
+})
+
+
+    function action(x) {
+        $('.shake-innerside img').removeClass().addClass("animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function() {
+            $(this).removeClass();
+        })
+
+    }
+
+
+//DeviceMotion
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+    } else {
+        alert("不支持摇一摇");
+    }
+
+    function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+    }
+    var SHAKE_THRESHOLD = 2000;
+    var last_update = 0;
+    var x, y, z, last_x, last_y, last_z;
+    var count = 0
+
+    function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+
+        var curTime = new Date().getTime();
+
+        if ((curTime - last_update) > 100) {
+
+            var diffTime = curTime - last_update;
+            last_update = curTime;
+
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+
+            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+
+            if (speed > SHAKE_THRESHOLD) {
+                count++;
+                $("#div").html(count);
+                //window.removeEventListener('devicemotion', deviceMotionHandler);
+                action();
+                //结果
+                setTimeout(function(){
+                    var hang=$(".cd-coupon").html()
+                    // $(".cd-coupon").remove();
+                    var hang=layer.open({
+                        content: hang,
+                        className:'coupon-raffle modal-fl-top',
+                        anim: false,
+                        shadeClose:false,
+                        style:'width:100%;position:fixed;top:0;left:0;z-index:10000;background:transparent;max-width: initial;min-width: initial;padding-bottom: 120px;box-shadow: none;',
+                        success:function(){
+                            //关闭按钮
+                            $(".hang-close").click(function(){
+                                $(".modal-fl-top").removeClass("in")
+                                    layer.close(hang)
+                            })
+                            //分享按钮
+                            $(".btn-share").on("click", function(e) {
+                                e.preventDefault();
+                                $(".modal-fl-top").removeClass("in")
+                                layer.close(hang)
+                                sharelog();
+                            })
+                        }
+                    })
+
+                    setTimeout(function() {
+                        $(".modal-fl-top").addClass("in")
+                    }, 100)
+                },500)
+            }
+            last_x = x;
+            last_y = y;
+            last_z = z;
+
+        }
+    }
+    </script>
+</body>
+
+</html>

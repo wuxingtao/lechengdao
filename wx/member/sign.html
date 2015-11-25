@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../script/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../script/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/base.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/member.css">
+    <style>
+    html {
+        background: url(../script/images/member/registor_bg_02.png) repeat-y;
+        background-size: 100%;
+        position: relative;
+    }
+    </style>
+</head>
+
+<body class="sign mhome">
+    <div class="page_full vmport">
+        <div class="sign_wrapper">
+            <div class="sign_top">
+                <div class="headPic"><img src="../script/images/member/registor_top1_01.png" alt=""></div>
+            </div>
+            <div class="signMain">
+                <div class="signRecord">
+                    <dl class="p15">
+                        <dd class="availableIn"><i>2</i>可用积分</dd>
+                        <dd class="signStatus status-original"><img onclick=signNow() src="../script/images/member/register5_03.png" alt=""></dd>
+                        <dd class="signNum"><i>2</i>签到次数</dd>
+                    </dl>
+                </div>
+                <div class="signOption">
+                    <dl>
+                        <dd class="sign-item">
+                            <a><img src="../script/images/member/register_03.png" alt=""></a>
+                        </dd>
+                        <dd class="sign-item">
+                            <a href="signRecord.html"><img src="../script/images/member/register_05.png" alt=""></a>
+                        </dd>
+                        <dd class="sign-item">
+                            <a><img src="../script/images/member/register_07.png" alt=""></a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="sign_calendar p15">
+                <div class="signNote">
+                    <input type="hidden" id="dayRecord" name="signCheck" value="签到日期" readonly="readonly" maxlength="10">
+                </div>
+            </div>
+            <!-- sign animation 增加op-cover去除hide-->
+            <div id="signPlus" class="op-cover">
+                <!-- <img src="../script/images/member/sign_num.png" alt=""> -->
+                <div class="front">
+                    <b>+1</b><span>每日签到获得1积分</span>
+                </div>
+                <div class="back"></div>
+            </div>
+            <!-- sign animation end -->
+        </div>
+    </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/js/bootstrap-datepicker.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script>
+    //选择日期
+    if ($.fn.datepicker) {
+        $('.signNote input').datepicker({
+            format: 'yyyy-mm-dd',
+            notOutDay: true,
+            maxDay: 30
+        });
+    }
+    //
+    function signNow() {
+        $(".signStatus").on("click", function() {
+            $(this).find("img").attr("src", "../script/images/member/register4_03.png").fadeIn();
+            var st = $(".sign .datepicker");
+            st.find("td.active").addClass("signTag");
+            //
+            if ($(this).hasClass("status-original")) {
+                $("#signPlus").addClass("signFloat")
+                setTimeout(function() {
+                    $("#signPlus").addClass("original-pt op-cover hide")
+                }, 1500)
+                $(this).removeClass("status-original").addClass("status-hold")
+            }
+        })
+
+    }
+    </script>
+</body>
+
+</html>

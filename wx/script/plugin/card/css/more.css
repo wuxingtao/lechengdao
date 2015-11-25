@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*CSS add*/
+
+/*卡片区域*/
+.more_cardfront_imgBox_animate{
+    -webkit-animation:frontCard 1s;
+    -moz-animation:frontCard 1s;
+    animation:frontCard 1s;
+}
+.more_cardback_imgBox_animate{
+    -webkit-animation:backCard 1s;
+    moz-animation:backCard 1s;
+    animation:backCard 1s;
+}
+
+@-webkit-keyframes frontCard{
+    from{-webkit-transform:rotateX(0deg);}
+    to{-webkit-transform:rotateX(-180deg);}
+}
+
+@-webkit-keyframes backCard{
+    from{-webkit-transform:rotateX(0deg);}
+    to{ -webkit-transform:rotateX(180deg); }
+}
+
+@-moz-keyframes frontCard{
+    from{-moz-transform:rotateX(0deg);}
+    to{-moz-transform:rotateX(-180deg);}
+}
+
+@-moz-keyframes backCard{
+    from{-moz-transform:rotateX(0deg);}
+    to{-moz-transform:rotateX(180deg); }
+}
+
+@keyframes frontCard{
+    from{transform:rotateX(0deg);}
+    to{transform:rotateX(-180deg);}
+}
+
+@keyframes backCard{
+    from{transform:rotateX(0deg);}
+    to{transform:rotateX(180deg); }
+}

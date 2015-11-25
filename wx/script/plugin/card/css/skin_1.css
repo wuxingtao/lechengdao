@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*skin_blue*/
+body{background-color:#e5f1f8 !important;}
+
+.btn{
+    background-color:#3d9cd2 !important;
+    border-color: #369CD5 !important;
+}
+
+#top_bar{
+    background-color: #3d9cd2 !important;
+    border-bottom: #c3cdae !important;
+}
+
+.Card-header{background: url(../images/blue/bg-top_blue.png) no-repeat 0 -25px/100% #fff;}
+
+.footer{
+  background-color:#e5f1f8 !important;
+  border-top:1px solid #c3cdae !important;
+}
+
+.form .current a{
+  color:#3d9cd2 !important;
+}
+
+.payamount .current:after{
+    border: 3px solid #3d9cd2;
+}
+
+.form-line #sumPay{
+      color: #3d9cd2;
+}
+
+.cosumePage{
+  background-color: #e5f1f8 !important;
+  border-top: 1px solid #b1cad9 !important;
+  border-bottom: 1px solid #b1cad9 !important;
+}
+
+.UnbindSuccess{
+  background: url(../images/blue/unbs_blue_01.png) no-repeat left top/100% !important;}

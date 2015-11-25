@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"> -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>优惠券领取处</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../script/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../script/css/slht.iconfont.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/member.css">
+    <script>
+    var phoneWidth = parseInt(window.screen.width)
+    var ua = navigator.userAgent;
+    var phoneScale = phoneWidth / 1080;
+    if (phoneWidth < 350) {
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=.85,maximum-scale=.85,minimum-scale=.85">')
+    } else {
+        document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"> ')
+    }
+    </script>
+</head>
+
+<body class="mhome lottery interval-area">
+    <header class="coupon-search">
+        <div class="cd2-search-icon"><img src="../script/images/icon-gray/icon-cp-search.png"></div>
+        <form>
+            <div class="cd2-search-box">
+                <input type="text" placeholder="搜索店铺名">
+            </div>
+        </form>
+    </header>
+    <div class="page_full vwport couponCenter-wrapper">
+        <main>
+            <div class="coupon-top">
+                <img src="../script/images/member/point/cp-heading1_01.png" alt="">
+                <div class="coupon-orderList">
+                    <ul class="fixNav">
+                        <li class="btn coupon-order"><a class="nav-order"><span class="hasOrder">优惠金额<i class="order-arrow"></i></span></a></li>
+                        <li class="btn coupon-order"><a class="nav-order amount-btn"><span><em>满额金额</em><i class="slht-iconfont">&#xe60e;</i></span></a>
+                            <div class="amount-list cl-lists">
+                                <ul>
+                                    <li><a>全部</a></li>
+                                    <li><a href="javascript:void(0);">0-49</a></li>
+                                    <li><a href="javascript:void(0);">50-199</a></li>
+                                    <li><a href="javascript:void(0);">200-499</a></li>
+                                    <li><a href="">500-999</a></li>
+                                    <li><a href="">1000-2499</a></li>
+                                    <li><a href="">2500以上</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="btn coupon-order">
+                            <a class="nav-order filter-btn"><span>筛选<i class="slht-iconfont">&#xe60f;</i></span></a>
+                            <div class="filter-list cl-lists">
+                                <ul class="">
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class1">
+                                        <label for="class1"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">全部</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class2">
+                                        <label for="class2"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">服饰鞋靴</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class3">
+                                        <label for="class3"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">手机数码</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class4">
+                                        <label for="class4"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">个护美妆</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class5">
+                                        <label for="class5"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">珠宝箱包</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class6">
+                                        <label for="class6"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">食品酒水</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class7">
+                                        <label for="class7"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">运动健康</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class8">
+                                        <label for="class8"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">家居家装</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class9">
+                                        <label for="class9"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">图书音像</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class10">
+                                        <label for="class10"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">家用电器</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class11">
+                                        <label for="class11"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">母婴童装</font>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="classify" class="category-class hidden" id="class12">
+                                        <label for="class12"><em class="techcheck"></em>
+                                            <font class="orderinfo_right">钟表车品</font>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="action-operate plt10"><a class="btn btn-op1">重置</a><a class="btn btn-op2">确认</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 优惠券列表  coupon-lump-->
+            <div class="coupon-lump">
+                    <a href="" class="coupon-view">
+                        <div class="coupon-info">
+                            <div class="coupon-param1">
+                                <div class="item1"><em>￥</em>200</div>
+                                <div class="item2">满1000可用</div>
+                            </div>
+                            <div class="coupon-param2">
+                                <div class="item1">oo糖果店</div>
+                                <div class="item-time">使用时间:11月2日-11月11日</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="coupon-view coupon-last">
+                        <div class="coupon-info">
+                            <div class="coupon-param1">
+                                <div class="item1"><em>￥</em>200</div>
+                                <div class="item2">满1000可用</div>
+                            </div>
+                            <div class="coupon-param2">
+                                <div class="item1">oo糖果店</div>
+                                <div class="item-time">使用时间:11月12日-11月11日</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="coupon-view">
+                        <div class="coupon-info">
+                            <div class="coupon-param1">
+                                <div class="item1"><em>￥</em>200</div>
+                                <div class="item2">满1000可用</div>
+                            </div>
+                            <div class="coupon-param2">
+                                <div class="item1">oo糖果店</div>
+                                <div class="item-time">使用时间:11月12日-11月11日</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="coupon-view">
+                        <div class="coupon-info">
+                            <div class="coupon-param1">
+                                <div class="item1"><em>￥</em>200</div>
+                                <div class="item2">满1000可用</div>
+                            </div>
+                            <div class="coupon-param2">
+                                <div class="item1">oo糖果店</div>
+                                <div class="item-time">使用时间:11月12日-11月11日</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="coupon-view coupon-nomore">
+                        <div class="coupon-info ">
+                            <div class="coupon-param1">
+                                <div class="item1"><em>￥</em>200</div>
+                                <div class="item2">满1000可用</div>
+                            </div>
+                            <div class="coupon-param2">
+                                <div class="item1">oo糖果店</div>
+                                <div class="item-time">使用时间:11月12日-11月11日</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="coupon-view coupon-done">
+                        <div class="coupon-info ">
+                            <div class="coupon-param1">
+                                <div class="item1"><em>￥</em>200</div>
+                                <div class="item2">满1000可用</div>
+                            </div>
+                            <div class="coupon-param2">
+                                <div class="item1">oo糖果店</div>
+                                <div class="item-time">使用时间:11月2日-11月11日</div>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+            <div id="share" onclick="closeshare()">
+                <div class="shareImg"><img src="../script/images/member/point/share-act_03.png" alt=""></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script>
+    //nav
+    $(".coupon-orderList .nav-order").each(function(){
+            $(".coupon-orderList .nav-order").click(function() {
+                    if($(this).hasClass("selected")){
+                        $(this).find("span .slht-iconfont").html("&#xe60e;")
+                        $(this).removeClass("selected");
+                        $(this).next('div').css("display", "none")
+                        $(".coupon-orderList .modal-backup").removeClass("show").addClass("hide")
+                        
+
+                    }else{
+                        $(this).addClass("selected").parent().siblings().find(".nav-order").removeClass("selected")
+                        $(this).next('div').css("display", "block")
+                        $(this).parent().siblings().find(".cl-lists").css("display", "none")
+                        var $this=$(this)
+                            $("body").addClass("modal-open")
+                            $(".coupon-orderList .modal-backup").addClass("show")
+                            $(".coupon-orderList .modal-backup").click(function(){
+                                $this.removeClass("selected");
+                                $this.next('div').css("display","none");
+                                $(this).removeClass("show").addClass("hide");
+
+                                $("body").removeClass("modal-open")
+                            })
+                        $(this).find("span .slht-iconfont").html("&#xe60f;")    //箭头图标上
+                    }
+                    if($(this).parent().is(":first-child")){
+                        $(".coupon-orderList .modal-backup").removeClass("show").addClass("hide")
+                    }
+
+        //优惠金额排序
+                if ($(this).find("span").hasClass("hasOrder")) {
+                    $(this).find("span").removeClass("hasOrder").addClass("rowOrder")
+                } else if ($(this).find("span").hasClass("rowOrder")) {
+                    $(this).find("span").removeClass("rowOrder").addClass("hasOrder")
+                }
+
+            })
+            $(".coupon-orderList li.btn").not(":first").click(function(){
+                $(".coupon-orderList li.btn:first").find("span").removeClass("rowOrder").addClass("hasOrder")
+            })
+
+    })
+//添加modalbg
+    $(".coupon-orderList").append('<div class="modal-backup"></div>')
+//重置
+    $(".action-operate .btn-op1").on("click",function(event){
+        $(".filter-list input:checkbox").attr("checked",false)
+    })    
+
+    $(".action-operate .btn-op2").on("click",function(event){
+       $(".filter-list").css("display","none");
+       $(this).parents(".filter-list").prev().removeClass("selected");
+       $(".coupon-orderList .modal-backup").removeClass("show").addClass("hide")
+    })    
+
+//amount-list
+$(".amount-list li a").on("click",function(e){
+    e.preventDefault();
+    var val=$(this).html()
+    $(".amount-btn span em").html(val);
+})
+
+
+//total
+    $(".filter-list li:eq(0)").on("click",function(){
+        if($(this).find("input:checked")){
+            $(this).siblings().find(".techcheck").css("background-position","0 3px")
+        }/*else if($(this).not("input:checked")){
+            $(this).siblings().find(".techcheck").css("background-position","-23px 3px")
+        }*/
+    })
+
+    //满额金额状态
+    $(".amount-list li").each(function() {
+        $(this).on("click", function() {
+            $(this).addClass("amout-select").siblings().removeClass("amout-select")
+        })
+    })
+
+    //优惠券领取
+    $(".coupon-info").on("click", function(event) {
+        event.preventDefault();
+        var common = "<div class=\"receive-success plt10\"><img src=\"../script/images/member/point/check_layer.png\" class=\"check-true\"><span>领取成功，优惠券将在几分钟 后发放到您的账号中</span><a class=\"btn btn-white btn-share\">邀请好友领券</a><a class=\"btn btn-blue\">立即使用</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\">"
+        common += "</div></div>"
+        var used = "<div class=\"receive-used plt10\"><img src=\"../script/images/member/point/check_warning.png\" class=\"check-true\"><span>这张券您已经领过啦， 再领我们发不起了</span><a class=\"btn btn-white\">确定</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\"></div></div>"
+
+        var cou1 = layer.open({
+            type: 1,
+            content: common, //common used 领取成功，领取失败
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn").click(function() {
+                    layer.close(cou1);
+                    $("body").removeClass("model-open")
+                })
+                $(".btn-share").on("click", function(e) {
+                    e.preventDefault();
+                    layer.close(cou1)
+                    sharelog();
+                })
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

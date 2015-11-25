@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* index */
+.index_wrapper .le-content {
+  background: url(../images/lechen/index_bg_02.png) repeat-y;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lump {
+  background: url(../images/lechen/index_bg_02.png) repeat-y;
+  background-size: 100%;
+  padding: 5px;
+  position: relative;
+  z-index: 150;
+}
+.index_wrapper .le-content .le-heading {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40%;
+}
+.index_wrapper .le-content .le-heading .le-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -60px;
+}
+.index_wrapper .le-content .le-lists {
+  margin-bottom: 0;
+}
+.index_wrapper .le-content .le-lists li {
+  width: 100%;
+  height: 70px;
+  margin: -33px auto 0;
+  position: relative;
+}
+.index_wrapper .le-content .le-lists li a {
+  text-indent: -999rem;
+  padding: 0 30px;
+}
+.index_wrapper .le-content .le-lists li:nth-child(even) a {
+  float: left;
+}
+.index_wrapper .le-content .le-lists li:nth-child(odd) a {
+  float: right;
+}
+.index_wrapper .le-content .le-lists .item-bg1 {
+  background: url(../images/lechen/img/bg1.png) no-repeat;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lists .item-bg2 {
+  background: url(../images/lechen/img/bg2.png) no-repeat;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lists .item-bg3 {
+  background: url(../images/lechen/img/bg3.png) no-repeat;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lists .item-bg4 {
+  background: url(../images/lechen/img/bg4.png) no-repeat;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lists .item-bg5 {
+  background: url(../images/lechen/img/bg5.png) no-repeat;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lists .item-bg6 {
+  background: url(../images/lechen/img/bg6.png) no-repeat;
+  background-size: 100%;
+}
+.index_wrapper .le-content .le-lists .item-bg1 {
+  width: 78%;
+}
+.index_wrapper .le-content .le-lists .item-bg2 {
+  width: 82%;
+}
+.index_wrapper .le-content .le-lists .item-bg3 {
+  width: 86%;
+}
+.index_wrapper .le-content .le-lists .item-bg4 {
+  width: 90%;
+}
+.index_wrapper .le-content .le-lists .item-bg5 {
+  width: 94%;
+}
+.index_wrapper .le-content .le-lists .item-bg6 {
+  width: 98%;
+}
+.index_wrapper .le-content .le-lists .item-bg1 {
+  z-index: 100;
+}
+.index_wrapper .le-content .le-lists .item-bg2 {
+  z-index: 101;
+}
+.index_wrapper .le-content .le-lists .item-bg3 {
+  z-index: 102;
+}
+.index_wrapper .le-content .le-lists .item-bg4 {
+  z-index: 103;
+}
+.index_wrapper .le-content .le-lists .item-bg5 {
+  z-index: 104;
+}
+.index_wrapper .le-content .le-lists .item-bg6 {
+  z-index: 105;
+}
+.index_wrapper .le-foot {
+  z-index: 200;
+  position: relative;
+  background: url(../images/lechen/lc_food_02.png) no-repeat;
+  background-size: 100% 100%;
+  height: 150px;
+}
+
+/* img-bg */
+/* 音频试听 */
+.listen-bg {
+  background: url(../images/lib/view/view-bg.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.audition-lists li {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 10px 10px 100px;
+  margin-bottom: 8px;
+}
+.audition-lists li:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background: url(../images/lib/view/orange-play-icon.png) no-repeat;
+  background-size: 100% 100%;
+  width: 110px;
+  height: 6px;
+}
+.audition-lists .proPhoto {
+  width: 120px;
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  left: 10px;
+  top: 10px;
+}
+.audition-lists .proPhoto .theme-img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.audition-lists .proPhoto .theme-img .artist-img {
+  position: relative;
+  z-index: 10;
+}
+.audition-lists .proPhoto .theme-img .play-cd {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.audition-lists .proPhoto .theme-img .play-round-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: url(../images/lib/view/orange-play.png) no-repeat;
+  background-size: 100%;
+  z-index: 50;
+}
+.audition-lists .privatCont .btnplay {
+  color: #ff7800;
+  display: table-cell;
+  vertical-align: middle;
+  max-width: 50px;
+  text-align: center;
+}
+.audition-lists .privatCont .btnplay i {
+  font-size: 2rem;
+}
+.audition-lists .privatCont .btnplay em {
+  display: block;
+  white-space: nowrap;
+}
+.audition-lists .privatCont .listen-cont {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding-left: 20px;
+}
+.audition-lists .privatCont .listen-cont h3 {
+  color: #404040;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 150px;
+  margin-top: 10px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .audition-lists .privatCont .listen-cont h3 {
+    max-width: 150px;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 568px) and (orientation: portrait) {
+  .audition-lists .privatCont .listen-cont h3 {
+    max-width: 200px;
+  }
+}
+.audition-lists .privatCont .listen-cont p {
+  color: #898989;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=web.css.map */

@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import "compass/css3";
+@import "compass/layout/stretching";
+$fontPrice:#ff6c00;
+$themeColor:#03b8d5;
+$gray:#333;
+
+/* color */
+
+.themeColor {
+    color: $themeColor !important;
+}
+
+/* shake */
+.cd-coupon {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+.coupon-raffle{
+    .layermcont{
+        padding:0;
+        border-radius:0;
+        line-height:auto;
+    }
+}
+
+.hanging-part {
+  position: relative;
+}
+
+.hang-bg {
+    width:100%;
+    text-align:center;
+  // width: 320px;
+  // position: absolute;
+  // margin: 0 auto;
+  // left: 0;
+  // right: 0;
+  img{
+    width:320px;
+  }
+}
+
+.hang-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 115px;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+.hang-cont1 {
+  color: #f34f34;
+  .coupon-num {
+    font-size: 1.8rem;
+    color: #f34f34;
+  }
+  dt {
+    margin: 5px 0 10px;
+  }
+  dd {
+    padding: 5px 0;
+    &:nth-of-type(1){
+        @include transform(scale(.9));
+    }
+    &:nth-of-type(2){
+        font-size: 2.5rem;
+        color: #f34f34;
+        line-height: 1.8rem;
+    }
+  }
+  .hang-share{
+    color: #fff;
+    font-size: 1.8rem;
+    width: 50%;
+    margin: 55px auto 0;
+    padding: 10px 0;
+    &:hover,&:focus,&:active{
+        color:#fff !important;
+    }
+  }
+}
+.hang-cont2{
+  background:url(../images/activity/sk1/hanging-btn.png) no-repeat;
+  background-size:100% 100%;
+  color:#fff !important;
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 40px;
+  a{
+    width: 100%;
+    border-radius: 18px;
+  }
+
+}
+.hang-close{
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    width: 50px;
+}
+
+
+$baiscRem:350/350;
+@media screen and (min-width:320px) and (max-width:320px){
+    .hanging-part{
+      transform:scale(320 / 350 * $baiscRem);
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:375px){
+    .hanging-part{
+      transform: scale(375 / 350 * $baiscRem);
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:400px){
+    .hanging-part{
+      transform: scale(400 / 350 * $baiscRem);
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:800px){
+    .hanging-part{
+      transform: scale(420 / 350 * $baiscRem);
+    }
+}

@@ -1,0 +1,808 @@
+@charset "utf-8";
+/* =============================
+   模块名：浏览器重置
+   说  明：移动端浏览器重置样式
+   ============================= */
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,form,fieldset,legend,input,select,textarea,button,th,td,menu,article{margin:0;padding:0;}
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;font-weight:100;vertical-align:middle;}
+ul,dl,ol{list-style:none;}
+img,fieldset,input[type="submit"]{border:none;}
+/*input{outline:none;background:transparent;vertical-align:top;}*/
+table{border-collapse:collapse;border-spacing:0;}
+button{cursor:pointer;border:none;}
+textarea{word-wrap:break-word;resize:none;}
+/* 去除IE下拉菜单箭头 */
+select::-ms-expand{display:none;}
+/* 去除IE下radio、checkbox默认样式 */
+::-ms-check{display:none;}
+/* 去除输入框、文本域默认边框和IOS4下的内阴影 */
+/*input, textarea, select{-webkit-appearance:none;border:none;outline:none;}*/
+/* 设置Gecko内核下输入框属性placeholder中值的文件颜色 */
+input:-moz-placeholder{color:#C4C4C4;}
+/* 设置webkit内核下输入框属性placeholder中值的文件颜色 */
+::-webkit-input-placeholder{color:#C4C4C4;}
+body{font-family:"Helvetica";-webkit-user-select:none;/* 禁止选中文本 */-webkit-tap-highlight-color:rgba(0,0,0,0);/* 设置点击链接时遮罩层为全透明 */overflow-x:hidden;min-height:100%;}
+/* 设置webkit内核下文字大小不小于12px */
+html,body{-webkit-text-size-adjust:none;/*height:100%;*/}
+/* 禁止长按链接、按钮、输入框出现系统默认弹框菜单 */
+a,button,input{-webkit-touch-callout:none;}
+a,a:visited{text-decoration:none;color:inherit;outline:none !important;-webkit-touch-callout:none;}
+a:focus,a:hover {color: inherit !important;text-decoration:none !important}
+
+body{  
+  background-color: #fdf3de;
+  background-color: #f3f3f3;
+  color:#494949;
+  font-size:15px;
+  font-family: 微软雅黑, 方正兰亭纤黑简体, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body h3,body p,body span{color:#494949;}
+/* btn按钮框模板 */
+.btn{color:#fff;/*padding:0 0;*/}
+
+.btn.focus, .btn:focus, .btn:hover{
+  color:#fff;
+}
+
+.btn-orange{
+  background-color: #f48345 !important;
+  border-color: #F27D3D !important;
+}
+.btn-blue{
+  background-color: #03b8d5 !important;
+  border-color:#08ABC5 !important;
+}
+.btn-green{
+  background-color: #07be04 !important;
+  border-color:#1CB819 !important;
+}
+.btn-lg{
+  border-radius:5px !important;
+    color: #fff;
+}
+.next-step{
+    padding: 15% 0;
+}
+.next-step input{  /* padding: 12px 0 !important; */  padding: 10px 16px !important;}
+.next-step a{
+  display:block;
+}
+#submitreg{
+  position: absolute;
+  top: 0;
+  right: 1px;
+  padding: 0 10px;
+  margin: 1px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-image: -webkit-linear-gradient(top,#fff 0,#bebebe 100%);
+  text-decoration: none;
+  vertical-align: middle;
+  height: 43px;
+}
+.verification-box{
+  display:table-cell;
+  vertical-align: middle;
+  padding-right: 5%;
+  width:100%;
+}
+#verification-mg{
+  display:table-cell;
+  vertical-align: middle;
+/*  width:100%;*/
+  height: 45px;
+  width: 108px;
+  display: inline-block;
+  line-height: 30px;
+}
+
+.form-boxbottow li:first-child{
+  display: table;
+  width: 100%;
+}
+
+
+/*皮肤切换*/
+#skin{
+  margin: 0 auto;
+  position: relative;
+  width: 60px;
+  bottom: 5%;
+}
+#skin li{
+  float: left;
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+}
+#skin li a{display:block;}
+#skin .a0{background-color:#f48345;}
+#skin .a1{background-color:#3d9cd2;}
+#skin .a2{background-color:#9ac852;}
+/*通用样式模板*/
+
+.pd10{
+    padding: 15px 10px 10px;
+}
+.pdleft_text li a{
+padding:0 15px;
+display:block;
+}
+.form-box{
+  padding: 30px 15px;
+}
+.toplable-box{
+  padding-bottom: 20px;
+  display:block;
+}
+.form-boxbottow li{
+  margin-bottom:15px;
+}
+
+.form-boxbottow .form-control{
+  border-radius:4px;
+}
+
+.form input{
+  padding: 12px 40px 13px 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form .msg1{
+  opacity:.6;
+}
+.input-left{
+   padding-left: 80px !important;
+}
+.input-right{
+  padding-right:90px !important;
+}
+.form-control{
+  height:45px !important;
+  border-radius:0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.boder-original:focus,.boder-original:hover,.form-contral:focus,.form-contral:hover{
+border-color:#ccc !important;
+}
+
+.form-line li{
+  height: 44px;
+  line-height: 44px;
+  position: relative;
+/*  border-bottom: 1px solid #D2D5D9;*/
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-line li lable{
+  position: absolute;
+  z-index: 16;
+  padding: 0 10px;
+  /*color: rgba(0,0,0,.8);*/
+}
+
+
+.border-tb{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.border-top{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.border-bottom{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btremove{border-bottom:0 !important;}
+
+/*form check*/
+.stats2,.stats3{  color: red;padding: 25px 0;position: relative;float: left;}
+
+/*表单单页样式*/
+.form-line li .formarrow{
+  position: absolute;
+  right: 3%;
+  top: 0;
+}
+
+.form-line .formarrow img{
+  /*width:100%;*/
+  width:8px;
+  opacity:.7;
+}
+.form-line .orange{
+  color:#f48345;
+  padding:0 4px;
+  font-style:normal;
+}
+
+.form-warning{
+  text-align: left;
+  width: 100%;
+  display: block;
+  padding-top: 30px;
+  color: red;
+}
+.form-line lable.renew{
+  color: #4e4e4e;
+  font-size: 1.1em;
+}
+.form-renew li lable{
+  color: #737373;
+}
+.form-renew #renew_top{
+  background-color:#e4e4e4;
+}
+.form-renew .time-string{
+  float: right;
+  height: 90%;
+  line-height: 12px;
+  margin: 2px 0;
+  overflow: hidden;
+}
+.form-renew .time-string .lrborder{
+  border-left: 0;
+  border-right: 0;
+}
+
+.form-renew .time-string li{
+  float: left;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 100%;
+  line-height: 2.8em;
+}
+
+
+/*表单 focus hover*/
+.form-modify .form-control:focus{
+  border-color:#ccc !important;
+}
+
+.pwd-check lable{
+  position: absolute;
+  z-index: 16;
+  padding: 0 10px;
+  line-height: 44px;
+}
+
+/*顶部nav区域*/
+.navbar-orange{
+  /*background-color:#f48345;
+  border-bottom:#d7c6a4;
+  border-radius: 0 !important;*/
+}
+.navbar{
+  margin-bottom:0px;
+}
+#top_bar{display:none;}
+
+#top_bar .le-first{
+  padding-top:10px;width:35%;text-align:left;vertical-align:middle;
+}
+#top_bar .top-heading{
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0, .1);
+  border-left: 1px solid #fff;
+  padding-left: 10%;
+  color: #fff;
+}
+
+.icon-wrap{
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 5px;
+  width: 20%;
+  text-align: left;
+  /* vertical-align: middle; */
+  fill: #fff;
+}
+
+.icon-wrap .icon{
+  padding: 5px 0;
+  width: 20%;
+  text-align: left;
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.icon-back{  
+ font-family: "icons"!important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;}
+.icon-back:before {
+  content: '\e67b';
+}
+@font-face {
+    font-family: 'icons';
+    src: url(../fonts/iconfont_3b7b41e9.eot);
+    src: url(../fonts/iconfont_3b7b41e9.eot#iefix)format('embedded-opentype'),url(../fonts/iconfont_3b7b41e9.woff)format('woff'),url(../fonts/iconfont_3b7b41e9.ttf)format('truetype'),url(../fonts/iconfont_3b7b41e9.svg?#iconfont)format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+/*card卡片区域*/
+
+.Card-header{
+  background: url(../images/mycard/bg-top.png) no-repeat 0 -25px #fff;
+  background-size: 100%;
+  padding-bottom: 30px;
+
+}
+
+.card-area{
+  text-align: center;
+  position: relative;
+  padding: 20px 30px;
+}
+.card-area .cartfrond-card-imgbox{
+  width:100%;
+}
+.card-area .cardPaybtn{
+  width:20%;
+  height:auto;
+  position: absolute;
+  bottom: -5%;
+  right: 10px;
+  cursor: pointer;
+}
+
+.card-area .codebg{
+  /*background:url(../images/mycard/codebg.png) no-repeat 0 0/100%;*/
+}
+.card-area .codebg img{width:100%;}
+
+.codebg .barCode{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 60px;
+}
+
+#amount {
+  text-align:center;
+  padding: 10px 0;
+}
+#amount span a{
+  padding: 0 15px;
+  display: inline-block;
+}
+#amount .btn30{
+  padding:6px 30px !important;
+}
+
+.btn-orange.active,.btn-orange.focus,.btn-orange:active,.btn-orange:focus,.btn-orange:hover,.open>.dropdown-toggle.btn-danger {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925
+}
+
+.footer{
+  padding: 0px 30px 30px 30px;
+  background-color:#fdf3de;
+  border-top:1px solid #d7c6a4;
+}
+
+.footer h3{
+  color: rgba(0,0,0,.7);
+  font-weight:bold;
+  padding: 25px 0 5px 0;
+}
+.footer h3 img{
+    width: 25px;
+}
+
+.footer h3 span{
+    padding-left:3%;
+}
+
+.footer ul li{
+  padding:5px 0;
+  color: rgba(0,0,0,.7);
+} 
+
+.Container .card-back{
+  /*display:none;*/
+}
+
+/*卡片会员属性*/
+.right-cardvalue{
+  line-height: inherit;
+  padding: 0 10px;
+  text-align: right;
+}
+
+/*consumption record*/
+{
+    padding: 0 10px;
+}
+
+.record-transaction li{
+  border-bottom: 1px dashed #ccc;
+  color: #494949;
+  line-height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.record-transaction li i{
+  font-style:normal;
+}
+
+.record-transaction li .consumption-data{
+  width:50%;
+  float:left;
+}
+.record-transaction li .consumption-item{
+  width: 20%;
+  text-align: center;
+  float: left;
+}
+.amount{
+  width: 25%;
+  float: right;
+  text-align: right;
+}
+.record-transaction li .amConsume{
+  color:#5ac121;
+}
+.record-transaction li .amRecharge{
+  color:#f85f1c;
+}
+
+.cosumePage{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #fdf3de;
+  border-top: 1px solid #e5e5e5;
+/*  border-top: 1px solid #d7c6a4;
+  border-bottom: 1px solid #d7c6a4;*/
+}
+.cosumePage ul{
+  overflow: hidden;
+  background-color: #fff;
+
+}
+.cosumePage li{
+  float: left;
+  /*padding: 15px 0;*/
+}
+.cosumePage .flip{
+  width:25%;
+  color:#000;
+  text-align: center;
+  font-size:1.4rem;
+}
+.cosumePage .numPage{
+  width:50%;
+  color:#494949;
+
+  text-align:center;
+}
+.cosumePage a{
+  cursor:pointer;
+  display: block;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.b-left{border-left:1px solid #B6B6B6;}
+.b-right{border-right:1px solid #B6B6B6;}
+
+/*Unbind-card*/
+.webchatUnbind,.UnbindSuccess,.backweb{
+  text-align: center;
+}
+
+.webchatUnbind img,.UnbindSuccess img{
+  width:100%;
+}
+
+.remind{
+  text-align:center;
+}
+
+.remind h3{
+  padding: 40px 0 20px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.remind .warning{
+  color:#f48345;
+}
+.remind p{
+  color: #494949;
+  padding: 2px 0;
+}
+.UnbindSuccess{
+  background: url(../images/mycard/unbs.png) no-repeat left top/100%;
+/*  min-height: 190px;*/
+  top: 0;
+  position: relative;
+}
+
+.UnbindSuccess img{/*display:none;*/}
+
+.backWeb{
+  padding-top:10%;
+  text-align:center;
+
+}
+
+/**/
+.form-recharge h2{
+  padding-bottom: 20px;
+}
+.form-recharge ul,.form-menu ul{
+  border: 1px solid #D2D5D9;
+  border-radius: 5px;
+}
+.form-recharge ul li:last-child,.form-menu ul li:last-child{
+  border-bottom:none;
+}
+.form-recharge .payamount a{
+  padding:0 10px;
+  display:block;
+  color:#494949;
+}
+
+.form-recharge .payamount input{
+    padding: 0 10px;
+}
+.form-recharge .form-contral{
+    padding: 0 10px;
+  border: none;
+  background: transparent;
+  height: 100%;
+}
+
+.payamount .current:after{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right:12px ;
+  width: 9px;
+  height: 16px;
+  border: 3px solid #f48345;
+  border-top: none !important;
+  border-left: none !important;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+.form .current a{
+  color:#f48345;
+}
+.form-menu ul{
+  margin:15px 0;
+  background-color: #fff;
+}
+
+.form-menu .pdleft_text li{
+  border-bottom: 1px solid #D2D5D9;
+}
+
+.form-menu .form-topPic img{width:100%;}
+
+.form-agreement h2{
+  text-align:center;
+  padding: 10px 0;
+  font-size:1.2em;
+}
+.form-agreement ul li{
+  padding-bottom:20px;
+}
+.form-agreement .checkbox{
+  text-align:center;
+}
+
+/* add */
+.form-control:focus{
+  border-color: #03b8d5;
+}
+
+
+/* 
+ *  tgl-btn
+ */
+.tgl{
+    display:none;
+}
+.tgl,.tgl:after,.tgl:before,.tgl*,.tgl*:after{
+    @include box-sizing(border-box);
+}
+.tgl+.tgl-btn{
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+}
+
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  -webkit-box-shadow: 1px 1px 2px #ccc;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-general+.tgl-btn{
+    background: #fff;
+    border-radius: 2em;
+    padding: 2px;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.tgl-general+.tgl-btn:after{
+    border-radius: 50%;
+    background: #fff;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.tgl-general:checked + .tgl-btn {
+  background: #03b8d5;
+}
+
+
+.card-l-wrapper .card-header{
+  background-color: #fff;
+  padding:10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.card-l-wrapper .card-header dt{
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 12px;
+  height: 24px;
+  overflow: hidden;
+  background: url(../../../images/member/card/card-back.png) bottom center no-repeat;
+  background-size: 12px;
+}
+.card-l-wrapper .card-header dd{
+  text-align: center;
+  color:#333;
+  font-size:1.8rem;
+}
+
+.card-l-wrapper .form-retrieve li{
+  position:relative;
+  padding:10px 0;
+  width:100%;
+}
+
+.card-l-wrapper .form-retrieve .card-bind{
+/*  line-height: 32px;*/
+}
+.card-l-wrapper .order-lt{
+  width: 80%;
+  display: inline-block;
+}
+.card-l-wrapper .order-switch{
+  position: absolute;
+  right: 10px;
+  top: 8px;
+    display:inline-block;
+    border: 1px solid #E6E6E6;
+}
+.card-l-wrapper .form-retrieve .card-option{
+  background-color: #fff;
+  border:1px solid #ccc;
+  padding: 10px 12px;
+  border-radius:6px;
+  height:45px;
+}
+.card-l-wrapper .card-btn{
+  padding: 20px 0 !important;
+  display: none;
+}
+.card-l-wrapper .card-btn button{
+  width:100%;
+  margin-bottom:15px;
+}
+.card-l-wrapper .card-btn .btn-1{
+  background-color: #d54803;
+}
+.card-l-wrapper .card-btn .btn-2{
+  background-color: #07be04;
+}
+.card-l-wrapper #verification{
+  background: url(../../../images/member/card/mycard-icon1.png) 10px center #fff no-repeat;
+  padding-left: 30px;
+  background-size: 10px;
+}
+.card-l-wrapper #number_pwd{
+  background: url(../../../images/member/card/mycard-icon2.png) 10px center #fff no-repeat;
+  padding-left: 30px;
+  background-size: 13px;
+}
+
+.form-agreement{
+  background-color: #fff;
+}
+/* card-check */
+.card-check-wrap #new_pay,.card-check-wrap #confirm_pay{
+  background: url(../../../images/member/card/mycard-icon2.png) 10px center #fff no-repeat;
+  padding-left: 30px;
+  background-size: 13px;
+}
+.card-check-wrap #card_id{
+  background: url(../../../images/member/card/mycard-icon3.png) 10px center #fff no-repeat;
+  padding-left: 30px;
+  background-size: 14px;
+}
+
+/* registered */
+.registered-wrapper{
+  background-color: #fff;
+}
+
+.registered-wrapper .registered-cont{
+  overflow:hidden;
+  z-index:15;
+  position:relative;
+}
+
+.registered-wrapper .registered-cont a{
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+
+.registered-wrapper .registered-cont a span{
+  background-color: #74bf7c;
+  border-radius: 25px;
+  height: 30px !important;
+  padding: 6px 12px;
+  width: 100%;
+  line-height: 1.5rem;
+}
+
+.registered-wrapper img{
+  width:100%;
+}
+.registered-wrapper footer{
+  position:fixed;
+  width:100%;
+  bottom:0;
+  z-index:10;
+}
