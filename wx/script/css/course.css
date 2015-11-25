@@ -96,6 +96,9 @@
   width: 60%;
   margin: 0 auto;
 }
+.receive-success span.form-success {
+  width: 80%;
+}
 .receive-success .btn-full-orange {
   background-color: #ff7800;
   color: #fff;

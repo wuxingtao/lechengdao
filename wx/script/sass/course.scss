@@ -101,6 +101,9 @@ $themeColor:#03b8d5;
         display: block;
         width: 60%;
         margin: 0 auto;
+        &.form-success{
+            width:80%;
+        }
     }
     .btn-full-orange{
         background-color: #ff7800;
