@@ -97,6 +97,12 @@ $(function() {
         $("body").append("<script>" + 'var swiper=new Swiper(".wei-banner",{pagination:".pagination",paginationClickable:true,spaceBetween:0,centeredSlides:true,autoplay:2500,autoplayDisableOnInteraction:false});' + "</script>")
     }
 
+// share
+var sha=document.body.getAttribute("data-share");
+console.log(sha)
+if(sha!=undefined){
+    $(".vwport").append('<div id="share" onclick="closeshare()"><div class="shareImg"><img src="../script/images/member/point/share-act_03.png" alt=""></div></div>')
+}
 
 
 })
