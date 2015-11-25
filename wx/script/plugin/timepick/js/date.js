@@ -78,11 +78,11 @@
             }
             var hourTmep = initH;
             var minuteTemp = initI;
-            if(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(11,2) != null && that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(11,2) != "") {
-            	hourTmep = parseInt(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(11,2));
+            if(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(11,2) != null && that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(11,2) != "") {
+            	hourTmep = parseInt(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(11,2));
             }
-            if(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(14,2) != null && that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(14,2) != "") {
-            	minuteTemp = parseInt(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(14,2));
+            if(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(14,2) != null && that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(14,2) != "") {
+            	minuteTemp = parseInt(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(14,2));
             }
             HourScroll.scrollTo(0, hourTmep*40, 100, true);
             MinuteScroll.scrollTo(0, minuteTemp*40, 100, true);   
@@ -95,10 +95,10 @@
         }
         function resetInitDete(){
             if(opts.curdate){return false;}
-            else if(that.siblings(":hidden[name='"+that.attr("class")+"']").val()===""){return false;}
-            initY = parseInt(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(2,2));
-            initM = parseInt(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(5,2));
-            initD = parseInt(that.siblings(":hidden[name='"+that.attr("class")+"']").val().substr(8,2));
+            else if(that.siblings(":hidden[name='"+that.attr("id")+"']").val()===""){return false;}
+            initY = parseInt(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(2,2));
+            initM = parseInt(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(5,2));
+            initD = parseInt(that.siblings(":hidden[name='"+that.attr("id")+"']").val().substr(8,2));
         }
         function bindButton(){
             resetIndex();
@@ -123,7 +123,7 @@
                 }else{
                      Ycallback(datestr);
                 }
-                that.siblings(":hidden[name='"+that.attr("class")+"']").val(datestr);
+                that.siblings(":hidden[name='"+that.attr("id")+"']").val(datestr);
                 $("#datePage").hide(); 
                 $("#dateshadow").hide();
             });
