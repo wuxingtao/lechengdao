@@ -61,12 +61,12 @@
             $(this).addClass("sel").siblings().removeClass("sel")
             $("#sexInput").val($(this).find("em").html())
         })
-        //datepick
-        $('#startTime').date({
-            theme: "datetime"
-        });
     })
 
+    //datepick
+    $('#startTime').date({
+        theme: "datetime"
+    });
     //预约提醒
     $(".order-btn").on("click", function(event) {
         event.preventDefault();
