@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>活动报名</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../script/plugin/timepick/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/course.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagebar course-enroll-wrapper" data-share="true">
+    <div class="vwport p0 m-wrapper">
+        <div class="course-explain-heading">
+            <span>您即将报名<br/>“南山南 北秋悲 北海有墓碑 周末爬南山活动”请确认您的个人信息无误。</span>
+        </div>
+        <form action="" class="course-enroll">
+            <dl>
+                <dt class="form-title">填写报名信息</dt>
+                <dd>
+                    <input type="text" class="form-control"  placeholder="您的姓名">   
+                </dd>
+                <dd><input type="phone" class="form-control"  placeholder="您的电话"></dd>
+                <dd class="sex">
+                    <label class="sex-item sel">
+                        <i class="icon-xt-check"></i>
+                        <input type="hidden" id="sexInput" value="先生" name="sex">
+                        <em>先生</em>
+                    </label>
+                    <label class="sex-item">
+                        <i class="icon-xt-check"></i>
+                        <em>女士</em>
+                    </label>
+                </dd>
+            </dl>
+        </form>
+        <div class="confirm-enroll-btn order-btn"><a href="" class="btn">确认报名</a></div>
+    </div>
+    <div id="datePlugin"></div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script src="../script/plugin/timepick/js/date.js"></script>
+    <script src="../script/plugin/timepick/js/iscroll.js"></script>
+    <script>
+    $(function(){
+        $(".sex").on("click",".sex-item",function(){
+            $(this).addClass("sel").siblings().removeClass("sel")
+            $("#sexInput").val($(this).find("em").html())
+        })
+    })
+
+    //datepick
+    $('#startTime').date({
+        theme: "datetime"
+    });
+    //预约提醒
+    $(".order-btn").on("click", function(event) {
+        event.preventDefault();
+        var common = "<div class=\"receive-success plt10\"><img src=\"../script/images/member/point/check_layer.png\" class=\"check-true\"><span class=\"form-success\">报名成功<br/>请您在活动开始前到达门店，参与活动</span><a class=\"btn btn-full-orange btn-share\">把好消息推送给好友</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\">"
+        common += "</div></div>"
+
+
+        var cou1 = layer.open({
+            type: 1,
+            content: common, 
+            shade:false,
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn").click(function() {
+                    layer.close(cou1);
+                    $("body").removeClass("model-open")
+                })
+                $(".btn-share").on("click", function(e) {
+                    e.preventDefault();
+                    layer.close(cou1)
+                    sharelog();
+                })
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>
