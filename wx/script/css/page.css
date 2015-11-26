@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* tc */
 .floot ul#slider2 {
   overflow: hidden;
@@ -46,6 +47,12 @@
 
 .tbanner img {
   max-width: 100%;
+}
+
+/* 背景 */
+.course-enroll-wrapper {
+  background: url(../images/lib/course/form-course_bg_01.png) repeat;
+  background-size: 100%;
 }
 
 /*# sourceMappingURL=page.css.map */

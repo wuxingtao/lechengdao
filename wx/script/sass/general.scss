@@ -183,7 +183,7 @@ overflow-y:auto;
 // }
 
 /* comment-raty */
-.comment-rating{
+.comment-rating,.rate-total{
     display: inline-block;
     vertical-align: top;
     line-height: 20px;
@@ -193,12 +193,13 @@ overflow-y:auto;
         width:20px;
     }
 }
-#count{
+#rateCount,[id*=rateCount-]{
     display:inline-block;
     font-style: oblique;
-    color: #f98d00;
+    color: #f5aa01;
     font-size: 1.6rem;
 }
+
 
 /* 
  * footer 底部导航
