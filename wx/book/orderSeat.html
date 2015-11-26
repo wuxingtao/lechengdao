@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>预约时间及课程</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" href="../script/plugin/timepick/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/web.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/course.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/order.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagebar  pgpure" data-share="true">
+    <div class="vwport p0 m-wrapper seats-container">
+        <div class="order-info-heading">
+            <div class="imageInfo"><img src="../script/images/lechen/order-infobg3.png" alt=""></div>
+            <div class="order-subject">预约详情</div>
+            <div class="order-box fl">
+                <h3 class="lc-store">乐橙岛钢琴吧（南山店）</h3>
+                <div class="order-message">
+                    <div class="order-thumb"><img src="../script/images/lechen/images/thumb-order1_03.png" alt=""></div>
+                    <span class="state-text">指定老师：姜东浩</span>
+                    <span class="state-text">预约费用：￥9.9</span>
+                </div>
+            </div>
+        </div>
+
+        <form>
+            <dl class="order-time p15">
+                <dt class="form-title">选择预约时间：</dt>
+                <dd>
+                    <input type="text" class="form-control form_datetime" readonly="readonly" placeholder="请填写预约时间" id="startTime">
+                    <input type="hidden" name="startTime">
+                </dd>
+            </dl>
+        </form>
+    </div>
+    <div class="order-common-btn order-btn"><a href="" class="btn">确认预约</a></div>
+
+    <div id="datePlugin"></div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script src="../script/plugin/timepick/js/date.js"></script>
+    <script src="../script/plugin/timepick/js/iscroll.js"></script>
+<script>
+
+    //datepick
+    $('#startTime').date({
+        theme: "datetime"
+    });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>课程打分</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/plugin/iconfont/qiqi-iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/web.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/page.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/order.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagebar pgpure" data-share="true">
+    <div class="vwport p0 m-wrapper">
+        <div class="order-info-heading order-point-heading">
+            <div class="imageInfo"><img src="../script/images/lechen/order-infobg5.png" alt=""></div>
+            <div class="order-subject">预约详情</div>
+            <div class="order-box fl">
+                <h3 class="lc-store">乐橙岛钢琴吧（南山店）</h3>
+                <div class="order-rate-message">
+                    <span class="state-text">指定老师：姜东浩</span>
+                    <span class="state-text">预约费用：￥9.9</span>
+                    <span class="state-text">12月24日 13：00-14：00</span>
+                    <span class="state-text">课程：《卡农》</span>
+                    <span class="person-text">
+                        <div class="state-item"><i class="qi-iconfont">&#xe622;</i><em>宁沐冰</em></div>
+                        <div class="state-item state-phone"><i class="qi-iconfont">&#xe620;</i><em>13800138000</em></div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-data">
+                <ul class="comment-option p15">
+                    <li class="comment-item comment-total">
+                        <div class="comment-text pull-left">综合评价：</div>
+                        <div class="comment-star comment-rating rate-total"></div>
+                        <div id="rateCount"></div>
+                    </li>
+                    <li class="comment-item">
+                        <div class="comment-text pull-left">钢琴水平：</div>
+                        <div class="comment-star comment-rating"></div>
+                        <div id="count1"></div>
+                    </li>
+                    <li class="comment-item">
+                        <div class="comment-text pull-left">课程内容：</div>
+                        <div class="comment-star comment-rating"></div>
+                        <div id="count2"></div>
+                    </li>
+                    <li class="comment-item">
+                        <div class="comment-text pull-left">授课方式：</div>
+                        <div class="comment-star comment-rating"></div>
+                        <div id="count3"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="comment-area"><textarea name="" id="" class="form-control" cols="30" rows="8" placeholder="请您对此次的课程进行评价..."></textarea></div>
+        </div>
+    </div>
+    <div class="order-common-btn order-btn"><a href="" class="btn">课程评分</a></div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/plugin/jraty/jquery.raty.min.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script>
+    $(function() {
+
+  //评分      
+        $(".rate-total").raty({
+            readOnly: true,
+            target: '#rateCount',
+            hints:["1.0分","2.0分","3.0分","4.0分","5.0分"],
+            targetKeep: true,
+            hafl:false,
+            halfShow: false, 
+        })
+
+
+    $(".comment-option .comment-rating:eq(1)").raty({
+        // score: 0,
+        score: function() {
+          return $(this).attr('data-score');
+        },
+        hafl:false,
+        halfShow: false, 
+    })
+    $(".comment-option .comment-rating:eq(2)").raty({
+        score: function() {
+          return $(this).attr('data-score');
+        },
+        hafl:false,
+        halfShow: false, 
+    })
+    $(".comment-option .comment-rating:eq(3)").raty({
+        score: function() {
+          return $(this).attr('data-score');
+        },
+        hafl:false,
+        halfShow: false, 
+    })
+
+    var sum=0
+    $(".comment-option .comment-rating").each(function(){
+        $(this).click(function(){
+            sum=(sum+parseInt($(this).find("input[name='score']").val()))/3
+            console.log(sum)
+        })
+    })
+
+
+})
+    </script>
+</body>
+
+</html>
