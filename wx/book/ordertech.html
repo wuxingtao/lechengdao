@@ -9,6 +9,7 @@
     <meta name="apple-touch-fullscreen" content="yes">
     <title>选择老师</title>
     <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/plugin/iconfont/qiqi-iconfont.css">
     <link rel="stylesheet" type="text/css" href="../script/css/general.css">
     <link rel="stylesheet" type="text/css" href="../script/css/web.css">
     <link rel="stylesheet" type="text/css" href="../script/css/order.css">
@@ -19,8 +20,10 @@
 
 <body class="mhome pagebar " data-share="true">
     <div class="vwport p0 m-wrapper">
-        <div class="topTitle"></div>
         <div class="order-tech-container">
+            <div class="title-wrap">
+                <div class="topTitle">选择老师</div>
+            </div>
             <div class="storeIntro">
                 <div class="proImg"><img src="../script/images/lechen/images/thumb-storepart_03.png" alt=""></div>
                 <div class="privatCont">
@@ -37,23 +40,34 @@
             </div>
             <div class="tech-lists">
                 <ul>
+                    <input type="hidden" name="tech">
                     <li class="tech-item">
-                        <input type="radio" name="techer" id="">
-                        <label for="">
+                        <a href="">
                             <div class="lumpBox">
-                                <div class="lump-heading"></div>
+                                <div class="lump-heading"><i class="qi-iconfont">&#xe61e;</i>选择这位老师</div>
                                 <div class="lump-content clearfix">
-                                    <div class="proPic"><img src="../script/image/lechen/images/thumb-ordertech1_03.png" alt=""></div>
+                                    <div class="proPic"><img src="../script/images/lechen/images/thumb-ordertech1_03.png" alt=""></div>
                                     <div class="privatCont">
-                                        <div class="proRaty">姜东浩</div>
-                                        <span>写一些个人介绍或者评价之类的让学员可以对老师有一个直观的了解。</span>
+                                        <div class="proRaty"><em>姜东浩</em><div class="comment-rating rating-record"></div></div>
+                                        <span>写一些个人介绍或者评价之类的让学员可以对老师有一个直观的了解。价之类的让学员可以对老师有一个直观的了解。价之类的让学员可以对老师有一个直观的了解。</span>
                                     </div>
                                 </div>
                             </div>
-                        </label>
+                        </a>
                     </li>
                     <li class="tech-item">
-                        <div class="lumpBox"></div>
+                        <a href="">
+                            <div class="lumpBox">
+                                <div class="lump-heading"><i class="qi-iconfont">&#xe61e;</i>选择这位老师</div>
+                                <div class="lump-content clearfix">
+                                    <div class="proPic"><img src="../script/images/lechen/images/thumb-ordertech1_03.png" alt=""></div>
+                                    <div class="privatCont">
+                                        <div class="proRaty"><em>姜东浩111</em><div class="comment-rating rating-record"></div></div>
+                                        <span>写一些个人介绍或者评价之类的让学员可以对老师有一个直观的了解。价之类的让学员可以对老师有一个直观的了解。价之类的让学员可以对老师有一个直观的了解。</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -61,9 +75,34 @@
     </div>
     <div class="order-common-btn order-btn"><a href="" class="btn">确认老师</a></div>
     <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/jraty/jquery.raty.min.js"></script>
     <script src="../script/plugin/layer/layer.m.js"></script>
     <script src="../script/js/global.js"></script>
     <script src="../script/js/web.js"></script>
+    <script>
+    $(".tech-item").on("click",function(){
+        event.preventDefault();
+        $(this).toggleClass("selected").siblings().removeClass("selected");
+
+        var teName=$(".tech-lists .selected").find(".proRaty em").html();
+        $("input[name='tech']").val(teName)
+        console.log(teName)
+    })
+
+
+$(function(){
+    //评分
+    $(".rating-record").raty({
+        readOnly: true,
+        score:4,
+        targetKeep: true,
+        hafl:false,
+        halfShow: false, 
+    })
+
+
+})
+    </script>
 </body>
 
 </html>

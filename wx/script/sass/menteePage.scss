@@ -171,6 +171,14 @@ $themeColor:#03b8d5;
         }
         &:focus,&:hover,&:active,&:visited{
             outline:0;
+            // span{
+            //     background-color: rgba(0,0,0,.8);
+            //     i{
+            //         color:rgba(255,255,255,8)
+            //     }
+            // }
+        }
+        &.on{
             span{
                 background-color: rgba(0,0,0,.8);
                 i{

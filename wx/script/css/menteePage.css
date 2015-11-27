@@ -162,10 +162,10 @@
 .menteel-mainList .btnplay:focus, .menteel-mainList .btnplay:hover, .menteel-mainList .btnplay:active, .menteel-mainList .btnplay:visited {
   outline: 0;
 }
-.menteel-mainList .btnplay:focus span, .menteel-mainList .btnplay:hover span, .menteel-mainList .btnplay:active span, .menteel-mainList .btnplay:visited span {
+.menteel-mainList .btnplay.on span {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.menteel-mainList .btnplay:focus span i, .menteel-mainList .btnplay:hover span i, .menteel-mainList .btnplay:active span i, .menteel-mainList .btnplay:visited span i {
+.menteel-mainList .btnplay.on span i {
   color: white;
 }
 

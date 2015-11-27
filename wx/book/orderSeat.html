@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zn-cn">
 
 <head>
@@ -33,7 +33,6 @@
                 </div>
             </div>
         </div>
-
         <form>
             <dl class="order-time p15">
                 <dt class="form-title">选择预约时间：</dt>
@@ -43,14 +42,39 @@
                 </dd>
             </dl>
         </form>
-        <div class="classifyType">
-            <span class="item"><i class="qi-iconfont"></i>可选</span>
-            <span class="item"><i class="qi-iconfont"></i>已选</span>
-            <span class="item"><i class="qi-iconfont"></i>已售</span>
+        <div class="seatline-wrapper">
+            <div class="classifyType">
+                可选座位:
+                <span class="item-state1"><i class="qi-iconfont">&#xe624;</i>可选</span>
+                <span class="item-state2"><i class="qi-iconfont">&#xe624;</i>已选</span>
+                <span class="item-state3"><i class="qi-iconfont">&#xe624;</i>已售</span>
+            </div>
+            <div class="seatBox">
+                <div class="first-area"></div>
+                <table class="clearfix">
+                    <tr>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="3"><i class="qi-iconfont">&#xe624;</i></td>
+                    </tr>
+                    <tr>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                    </tr>
+                    <tr>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                        <td class="seat-item col-md-3 col-xs-3" data-ta="1"><i class="qi-iconfont">&#xe624;</i></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <div class="order-common-btn order-btn"><a href="" class="btn">确认预约</a></div>
-
     <div id="datePlugin"></div>
     <script src="../script/js/jquery.min.js"></script>
     <script src="../script/plugin/layer/layer.m.js"></script>
@@ -58,14 +82,41 @@
     <script src="../script/js/web.js"></script>
     <script src="../script/plugin/timepick/js/date.js"></script>
     <script src="../script/plugin/timepick/js/iscroll.js"></script>
-<script>
+    <script>
+    var box = $(".seatBox table")
+    $("td", box).on("click", function() {
+        $(this).attr('data-ta', function(index, attr) {
+            return attr == 1 ? 2 : 1;
+        })
 
-    //datepick
-    $('#startTime').date({
-        theme: "datetime"
-    });
+        var str = "";
+        $("td[data-ta='2']", box).each(function() {
+            var row = $(this).parent().index() + 1;
+            var col = $(this).index() + 1;
+            str += "" + row + "排" + col + "列"
+                // console.log("当前座位："+row+"排"+col+"列")
+            str.toString()
+            console.log(str.toString())
+            if (str.length > 1) {
 
-</script>
+            }
+        })
+    })
+
+    $(function() {
+        $("td", box).each(function() {
+                if ($(this).attr("data-ta") == 3) {
+                    $(this).unbind("click");
+                }
+
+            })
+            //datepick
+        $('#startTime').date({
+            theme: "datetime"
+        });
+
+    })
+    </script>
 </body>
 
 </html>
