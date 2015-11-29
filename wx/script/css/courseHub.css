@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* xt-personal mix */
+/* 课程列表 */
+.coursehub-wrapper .tabNav {
+  background: url(../images/member/course/tab-bg.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.coursehub-wrapper #courseTab {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 10px;
+}
+.coursehub-wrapper #courseTab li {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.coursehub-wrapper #courseTab li a:hover {
+  background-color: #ff7902;
+  color: #fff !important;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+.coursehub-wrapper #courseTab li.active a {
+  background-color: #ff7902;
+  color: #fff !important;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+.coursehub-wrapper #courseTab li:nth-of-type(2):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  top: 3px;
+  bottom: 0;
+  left: -1px;
+  background-color: #fff;
+}
+.coursehub-wrapper #courseTab li:nth-of-type(2):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  top: 3px;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+}
+.coursehub-wrapper .course-lists li {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.coursehub-wrapper .course-lists li.event-state1 .font-state em, .coursehub-wrapper .course-lists li.event-state1 .courseInfo .infoState .state-operate em, .coursehub-wrapper .course-lists .courseInfo .infoState li.event-state1 .state-operate em {
+  color: #969696;
+}
+.coursehub-wrapper .course-lists li.event-state2 .font-state em, .coursehub-wrapper .course-lists li.event-state2 .courseInfo .infoState .state-operate em, .coursehub-wrapper .course-lists .courseInfo .infoState li.event-state2 .state-operate em {
+  color: #03b8d5;
+}
+.coursehub-wrapper .course-lists li.event-state3 em {
+  color: #03b8d5;
+}
+.coursehub-wrapper .course-lists li.event-state3 .privatCont {
+  padding: 0 0;
+}
+.coursehub-wrapper .course-lists .courseInfo dt {
+  border-bottom: 1px solid #e5e5e5;
+}
+.coursehub-wrapper .course-lists .courseInfo .param-del {
+  color: #03b8d5;
+}
+.coursehub-wrapper .course-lists .courseInfo dd {
+  display: block;
+  overflow: hidden;
+}
+.coursehub-wrapper .course-lists .courseInfo dd .state-opetate span {
+  display: inline-block;
+  color: #fff;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState .font-state, .coursehub-wrapper .course-lists .courseInfo .infoState .state-operate {
+  display: table-cell;
+  vertical-align: middle;
+  min-width: 150px;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState .state-operate {
+  width: 100%;
+  text-align: right;
+  white-space: nowrap;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState .state-operate .btn {
+  color: #fff;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState .state-operate .item1 {
+  background-color: #ff7e00;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState .state-operate .item2 {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+.coursehub-wrapper .course-lists .courseInfo .infoState .state-operate .item3 {
+  background-color: #f4be68;
+}
+.coursehub-wrapper .course-box {
+  padding: 10px;
+}
+.coursehub-wrapper .course-box .proPhoto {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+.coursehub-wrapper .course-box .proPhoto img {
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #ff7e00;
+}
+.coursehub-wrapper .course-box .privatCont {
+  padding: 10px 0;
+}
+.coursehub-wrapper .course-box .privatCont .pri-cont {
+  display: block;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=courseHub.css.map */

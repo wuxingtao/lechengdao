@@ -72,6 +72,10 @@
                     </tr>
                 </table>
             </div>
+
+            <div class="selectInfo">
+                
+            </div>
         </div>
     </div>
     <div class="order-common-btn order-btn"><a href="" class="btn">确认预约</a></div>
@@ -89,18 +93,33 @@
             return attr == 1 ? 2 : 1;
         })
 
-        var str = "";
-        $("td[data-ta='2']", box).each(function() {
-            var row = $(this).parent().index() + 1;
-            var col = $(this).index() + 1;
-            str += "" + row + "排" + col + "列"
-                // console.log("当前座位："+row+"排"+col+"列")
-            str.toString()
-            console.log(str.toString())
-            if (str.length > 1) {
+        var str="";
+        var row = $(this).parent().index() + 1;
+        var col = $(this).index() + 1;
+        var attr=$(this).attr('data-ta')
 
-            }
-        })
+        if(attr==2){
+            $(".selectInfo").append('<span class="'+row+''+col+'">'+row+'排'+col+'列</span>')
+        }else if(attr==1){
+            $(".selectInfo ."+row+""+col+"").remove()
+        }
+ 
+        // console.log($(this).attr('data-ta'))
+        // $(this).attr('data-ta')==2 ? $(".selectInfo").append('<span class="'+col+'">'+row+'排'+col+'列</span>')
+        // :1?$(".selectInfo ."+col+"").remove()
+
+        // var str = "";
+        // $("td[data-ta='2']", box).each(function() {
+        //     var row = $(this).parent().index() + 1;
+        //     var col = $(this).index() + 1;
+        //     str += "" + row + "排" + col + "列"
+        //         // console.log("当前座位："+row+"排"+col+"列")
+        //     str.toString()
+        //     console.log(str.toString())
+        //     if (str.length > 1) {
+
+        //     }
+        // })
     })
 
     $(function() {
@@ -110,7 +129,7 @@
                 }
 
             })
-            //datepick
+    //datepick
         $('#startTime').date({
             theme: "datetime"
         });

@@ -1,0 +1,164 @@
+@charset "utf-8";
+@import "compass/css3";
+@import "compass/layout/stretching";
+@import 'xt_mixin';
+$main-font:#03b8d5;
+$main-grey:#333;
+
+/* 课程列表 */
+.coursehub-wrapper{
+    .tabNav{
+        background:url(../images/member/course/tab-bg.png) no-repeat 0 0;
+        background-size: 100% 100%;
+    }
+    #courseTab{
+        @include displayflex;
+        margin-bottom:10px;
+        li{
+            position:relative;
+            color:#fff;
+            text-align: center;
+            @include flex(1);
+            a{
+                &:hover{
+                    background-color: #ff7902;
+                    color:#fff !important;
+                    border: 1px solid transparent;
+                    border-radius:0;
+                }
+            }
+            &.active{
+                a{
+                    background-color: #ff7902;
+                    color:#fff !important;
+                    border: 1px solid transparent;
+                    border-radius:0;
+                }
+            }
+        }
+        li:nth-of-type(2){
+            &:before{
+                content:'';
+                position:absolute;
+                width:1px;
+                height:80%;
+                top:3px;
+                bottom:0;
+                left:-1px;
+                background-color: #fff;
+            }
+            &:after{
+                content:'';
+                position:absolute;
+                width:1px;
+                height:80%;
+                top:3px;
+                bottom:0;
+                right:0;
+                background-color: #fff;
+            }
+        }
+    }
+    .tab-content{
+
+    }
+    .course-lists{;
+        li{
+            background-color: #fff;
+            margin-bottom: 10px;
+            &.event-state1{
+                .font-state{
+                    em{
+                        color:#969696;
+                    }
+                }
+            }
+            &.event-state2{
+                .font-state{
+                    em{
+                        color:#03b8d5;
+                    }
+                }
+            }
+            &.event-state3{
+                em{
+                    color:#03b8d5;
+                }
+                .privatCont{
+                    padding:0 0;
+                }
+            }
+        }
+        .courseInfo{
+            dt{
+                border-bottom:1px solid #e5e5e5;
+            }
+            .param-del{
+                color: #03b8d5;
+            }
+            dd{
+                display: block;
+                overflow: hidden;
+                .state-opetate{
+                    span{
+                        display:inline-block;
+                        color:#fff;
+                    }
+                }
+            }
+            .infoState{
+                border-top:1px solid #e5e5e5;
+                padding: 10px;
+                .font-state{
+                    display:table-cell;
+                    vertical-align: middle;
+                    min-width:150px;
+                }
+                .state-operate{
+                    @extend .font-state;
+                    width:100%;
+                    text-align: right;
+                    white-space: nowrap;
+                    .btn{
+                        color:#fff;
+                        &:hover,&:focus,&:active,&:visited{
+                            // color:#fff !important;
+                        }
+                    }
+                    .item1{
+                        background-color: #ff7e00;
+                    }
+                    .item2{
+                        border-color:#ff0000;
+                        color:#ff0000;
+                    }
+                    .item3{
+                        background-color: #f4be68;
+                    }
+                }
+            }
+        }
+    }
+
+    .course-box{
+        padding:10px;
+        .proPhoto{
+            width:80px;
+            height:80px;
+            float:left;
+            margin:0 15px 0 0;
+            img{
+                height:100%;
+                border-radius:4px;
+                border:1px solid #ff7e00;
+            }
+        }
+        .privatCont{
+            padding:10px 0;
+            .pri-cont{
+                display:block;
+                white-space:nowrap;
+            }
+        }
+    }
+}

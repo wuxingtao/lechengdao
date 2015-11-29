@@ -831,6 +831,10 @@ h1#brand {
   background-color: #fff;
 }
 
+.pgsilver {
+  background-color: #f0efed;
+}
+
 #sidebar {
   background-color: #ff2d4b;
 }
@@ -880,15 +884,15 @@ h1#brand {
 .comment-rating, .rate-total {
   display: inline-block;
   vertical-align: top;
-  line-height: 20px;
+  line-height: 15px;
   margin-left: 10px;
   width: 140px !important;
 }
 .comment-rating img, .rate-total img {
-  width: 20px;
+  width: 15px;
 }
 
-#rateCount, [id*=rateCount-] {
+#rateCount, [id*=rateCount-], .rateTarget {
   display: inline-block;
   font-style: oblique;
   color: #f5aa01;

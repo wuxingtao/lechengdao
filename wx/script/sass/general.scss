@@ -22,6 +22,9 @@ h1#brand {
 .pgpure{
     background-color:#fff;
 }
+.pgsilver{
+    background-color: #f0efed;
+}
 #sidebar {
     background-color: $company-fontcolor;
 }
@@ -186,14 +189,14 @@ overflow-y:auto;
 .comment-rating,.rate-total{
     display: inline-block;
     vertical-align: top;
-    line-height: 20px;
+    line-height: 15px;
     margin-left: 10px;
     width: 140px !important;
     img{
-        width:20px;
+        width:15px;
     }
 }
-#rateCount,[id*=rateCount-]{
+#rateCount,[id*=rateCount-],.rateTarget{
     display:inline-block;
     font-style: oblique;
     color: #f5aa01;

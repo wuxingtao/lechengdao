@@ -222,6 +222,17 @@ $gray:#333;
             }
         }
     }
+    .selectInfo{
+        border-bottom:1px solid #e5e5e5;
+        margin: 20px 0 10px 0;
+        span{
+            display:inline-block;
+            border-radius:4px;
+            border:1px solid #ddd;
+            padding:5px;
+            margin: 0 10px 10px 0;
+        }
+    }
 }
 
 .title-wrap {

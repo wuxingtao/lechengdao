@@ -177,6 +177,17 @@
 .seats-container .seatBox .seat-item[data-ta="3"] i {
   color: #ef2424;
 }
+.seats-container .selectInfo {
+  border-bottom: 1px solid #e5e5e5;
+  margin: 20px 0 10px 0;
+}
+.seats-container .selectInfo span {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 0 10px 10px 0;
+}
 
 .title-wrap {
   position: relative;
