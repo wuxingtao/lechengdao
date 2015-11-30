@@ -113,6 +113,10 @@
 
 /* img-bg */
 /* 音频试听 */
+.listen-wrapper {
+  margin: 10px 0;
+}
+
 .listen-bg {
   background: url(../images/lib/view/view-bg.jpg) no-repeat;
   background-size: 100%;
@@ -216,6 +220,71 @@
 .audition-lists .privatCont .listen-cont p {
   color: #898989;
   font-size: 1.2rem;
+}
+
+/* listen-view */
+.linstenView ul.lisetenView-box {
+  margin: 10px 0 4% 4%;
+}
+.linstenView ul.lisetenView-box li {
+  width: 46%;
+  float: left;
+  margin: 0 4% 4% 0;
+  border-radius: 4px;
+}
+.linstenView ul.lisetenView-box li .circle-outer {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  position: relative;
+}
+.linstenView ul.lisetenView-box li .circle-outer .circle-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+}
+.linstenView ul.lisetenView-box li .circle-outer .circle-btn i {
+  color: #ff7800;
+  font-size: 3rem;
+}
+.linstenView ul.lisetenView-box li .circle-inner {
+  border-radius: 100%;
+  border: 1px solid #cda783;
+  padding: 10px;
+  position: relative;
+  z-index: 100;
+}
+.linstenView ul.lisetenView-box li .circle-inner img {
+  border-radius: 100%;
+  border: 1px solid #cda783;
+}
+.linstenView ul.lisetenView-box li .circle-inner:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background: url(../images/lib/view/circle-inner.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.linstenView ul.lisetenView-box li .song-name {
+  text-align: center;
+  background-color: #b17a5a;
+  color: #fff;
+  padding: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.linstenView ul.lisetenView-box li .song-name span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding: 0 5px;
 }
 
 /* 活动 */
@@ -371,6 +440,17 @@
 }
 .article-wrapper .pb-standard {
   padding-bottom: 80px;
+}
+.article-wrapper .storePage .detail-lump h3 {
+  padding: 5px 0;
+  margin: 0;
+  font-weight: bold;
+}
+.article-wrapper .storePage .detail-lump span {
+  color: #a2a2a2;
+  padding: 5px 0;
+  line-height: 1rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=web.css.map */

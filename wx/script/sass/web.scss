@@ -104,7 +104,9 @@ $gray:#333;
 // }
 
 /* 音频试听 */
-
+.listen-wrapper{
+    margin: 10px 0;
+}
 .listen-bg {
     background: url(../images/lib/view/view-bg.jpg) no-repeat;
     background-size: 100%;
@@ -210,6 +212,72 @@ $gray:#333;
     }
 }
 
+/* listen-view */
+.linstenView{
+    ul.lisetenView-box{
+        margin: 10px 0 4% 4%;
+        li{
+            width: 46%;
+            float: left;
+            margin: 0 4% 4% 0;
+            border-radius: 4px;
+            .circle-outer{
+                background-color: rgba(255,255,255,.8);
+                padding: 10px;
+                position:relative;
+                .circle-btn{
+                    position:absolute;
+                    right:0;
+                    bottom:0;
+                    z-index:200;
+                    i{
+                        color:#ff7800;
+                        font-size:3rem;
+                    }
+                }
+            }
+            .circle-inner{
+                border-radius: 100%;
+                border: 1px solid #cda783;
+                padding: 10px;
+                position: relative;
+                z-index:100;
+                img{
+                    border-radius:100%;
+                    border:1px solid #cda783;
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 30px;
+                    height: 30px;
+                    background: url(../images/lib/view/circle-inner.png) no-repeat 0 0;
+                    background-size: 100% 100%;
+                }
+            }
+            .song-name{
+                text-align:center;
+                background-color: #b17a5a;
+                color:#fff;
+                padding: 10px 0;
+                white-space: nowrap;
+                overflow: hidden;
+                span{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: block;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
 
 /* 活动 */
 
@@ -303,7 +371,7 @@ $gray:#333;
         }
     }
 }
-//活动详情
+//活动详情,分店详情
 .article-wrapper{
     .detail-title{
         margin: 10px 0;
@@ -357,5 +425,20 @@ $gray:#333;
     }
     .pb-standard{
         padding-bottom:80px;
+    }
+    .storePage{
+        .detail-lump{
+            h3{
+                padding:5px 0;
+                margin:0;
+                font-weight: bold;
+            }
+            span{
+                color: #a2a2a2;
+                padding: 5px 0;
+                line-height: 1rem;
+                font-size:1.2rem;
+            }
+        }
     }
 }

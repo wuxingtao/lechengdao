@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>预约体验课</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/course.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/page.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagebar" data-share="true">
+    <div class="vwport p0 m-wrapper coursePrimay">
+        <div class="course_heading"><img src="../script/images/lib/course/cs_banner02_01.png" alt=""></div>
+        <main class="contentMain">
+            <h3 class="couse_title"><a href="">预约体验课</a></h3>
+            <div class="course-content">
+                <div class="course_line"></div>
+                <div class="course_pure">
+                    <div class="course-pro">
+                        <span>
+                        乐橙岛提供体验课程，仅需要9.9元即可享受。
+                        包括成人速成钢琴曲2首（简谱双手）再加一个月免费钢琴练习辅导！！！<br/>
+                        学习钢琴基础知识：1:针对零基础学员，了解钢琴、掌握专业演奏姿势（坐姿、手型、触键）、节奏训练、基础乐理、手指灵活训练、左右手协调练习。
+                        </span>
+                    </div>
+                    <div class="course-song">
+                        <div class="proPic"><img src="../script/images/lib/course/cs_thumb_04.png" alt=""></div>
+                        <h4>致爱丽丝致爱丽丝致爱丽丝致爱丽丝致爱丽丝致爱丽丝</h4>
+                        <span>贝多芬<em>1810</em></span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-common-btn order-btn"><a href="" class="btn">立即预约</a></div>
+        </main>
+    </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/js/touchslider.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script>
+    //预约提醒
+    $(".order-btn").on("click", function(event) {
+        event.preventDefault();
+        var common = "<div class=\"receive-success plt10\"><img src=\"../script/images/member/point/check_layer.png\" class=\"check-true\"><span>预约成功<br/>请您到门店进行支付</span><a class=\"btn btn-full-orange btn-share\">把好消息推送给好友</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\">"
+        common += "</div></div>"
+
+
+        var cou1 = layer.open({
+            type: 1,
+            content: common,
+            shade: false,
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn").click(function() {
+                    layer.close(cou1);
+                    $("body").removeClass("model-open")
+                })
+                $(".btn-share").on("click", function(e) {
+                    e.preventDefault();
+                    layer.close(cou1)
+                    sharelog();
+                })
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>
