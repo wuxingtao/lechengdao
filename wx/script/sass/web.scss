@@ -108,8 +108,8 @@ $gray:#333;
     margin: 10px 0;
 }
 .listen-bg {
-    background: url(../images/lib/view/view-bg.jpg) no-repeat;
-    background-size: 100%;
+    background: url(../images/lib/img/view-bg.jpg) no-repeat;
+    background-size: 100% 100%;
 }
 
 .audition-lists {
@@ -221,6 +221,7 @@ $gray:#333;
             float: left;
             margin: 0 4% 4% 0;
             border-radius: 4px;
+            @include box-shadow(1px 1px 5px #4A4A4A);
             .circle-outer{
                 background-color: rgba(255,255,255,.8);
                 padding: 10px;

@@ -108,3 +108,12 @@ $themeColor:#03b8d5;
     margin: 0 0;
     padding-right: 2%;
 }
+.order-more-btn{
+    @extend .order-common-btn;
+    background:url(../images/lechen/meetee-btn.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 10px 15px 15px;
+    a{
+        padding: 10px 0;
+    }
+}
