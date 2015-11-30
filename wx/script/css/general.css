@@ -1738,6 +1738,10 @@ em {
   width: 20px;
 }
 
+.more-added {
+  display: none;
+}
+
 .more-added + .loading {
   text-align: center;
   font-size: 20px;

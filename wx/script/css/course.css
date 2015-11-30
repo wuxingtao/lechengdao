@@ -39,6 +39,33 @@
   display: block;
   text-indent: 2rem;
 }
+.coursePrimay .course_pure .course-pro {
+  padding: 5px 15px;
+}
+.coursePrimay .course_pure .course-song {
+  border: 1px solid #ff6c00;
+  padding: 10px;
+  margin: 10px;
+}
+.coursePrimay .course_pure .course-song .proPic {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+.coursePrimay .course_pure .course-song .proPic img {
+  height: 100%;
+}
+.coursePrimay .course_pure .course-song h4 {
+  color: #ff6c00;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+.coursePrimay .course_pure .course-song em {
+  margin-right: 10px;
+}
 .coursePrimay .course_dec {
   background: url(../images/lib/course/course_textbg_01.png) no-repeat 0 0, url(../images/lib/course/course_textbg_03.png) no-repeat left bottom;
   background-size: 100%;

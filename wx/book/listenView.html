@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>视唱练习</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/plugin/iconfont/qiqi-iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/web.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagefull pagebar listen-bg">
+    <div class="vwport p0 m-wrapper">
+        <div class="linstenView">
+            <ul class="lisetenView-box" id="xt-content">
+                <li class="item">
+                    <div class="circle-outer">
+                        <div class="circle-inner"><img src="../script/images/lib/view/images/circle-inner-img_03.png" alt=""></div>
+                        <div class="circle-btn"><i class="qi-iconfont">&#xe619;</i></div>
+                    </div>
+                    <div class="song-name"><span>ALWATS WITH MEALWATS WITH MEALWATS WITH MEALWATS WITH ME</span></div>
+                </li>
+                <li class="item">
+                    <div class="circle-outer">
+                        <div class="circle-inner"><img src="../script/images/lib/view/images/circle-inner-img_03.png" alt=""></div>
+                        <div class="circle-btn"><i class="qi-iconfont">&#xe619;</i></div>
+                    </div>
+                    <div class="song-name"><span>ALWATS WITH ME</span></div>
+                </li>
+                <li class="item">
+                    <div class="circle-outer">
+                        <div class="circle-inner"><img src="../script/images/lib/view/images/circle-inner-img_03.png" alt=""></div>
+                        <div class="circle-btn"><i class="qi-iconfont">&#xe619;</i></div>
+                    </div>
+                    <div class="song-name"><span>ALWATS WITH MEALWATS WITH MEALWATS WITH MEALWATS WITH ME</span></div>
+                </li>
+
+            </ul>
+            <!-- loading -->
+            <div id="pages" class="more-added"><a id="next" class="btn" href="javascript:void(0);">查看更多</a></div>
+            <div class="loading"></div>
+        </div>
+
+    </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/infinite/jquery.infinite.js"></script>
+    <script src="../script/plugin/infinite/debug.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+   <script>
+   //scroll
+
+   $('#xt-content').infinitescroll({
+       loading: {
+           msgText: "",
+           img: "../script/images/icon-gray/loading.gif",
+           finishedMsg: '没有新数据了哦...',
+           selector: '.loading' //loading选择器
+       },
+       navSelector: "#pages", //导航的选择器，会被隐藏
+       nextSelector: "#next", //包含下一页链接的选择器
+       itemSelector: "li.item", //
+       debug:true,
+       dataType: 'html', //格式要和itemSelector保持一致
+       maxPage: 5, //最大加载的页数
+       extraScrollPx: 150,
+       bufferPx: 1000,
+       errorCallback: function() { //加载完数据后的回调函数
+
+       },
+       path: function(index) { //获取下一页方法
+           return "listenView" + index + ".html";
+       },
+   }, function(newElements, data, url) { //回调函数
+       //console.log(data);
+       //alert(url);
+   });
+
+   </script>
+</body>
+
+</html>

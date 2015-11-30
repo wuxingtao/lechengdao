@@ -64,3 +64,56 @@ $themeColor:#03b8d5;
     background: url(../images/lib/course/form-course_bg_01.png) repeat;
     background-size: 100%;
 }
+
+//order-btn
+.order-common-btn {
+    background: url(../images/lechen/order-btn.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 25px 15px 15px;
+    a {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0 15px 0;
+        font-weight: bold;
+        @include text-shadow(2px 1px 2px #3D3D3D);
+        &:hover,
+        &:focus,
+        &:visited,
+        &:focus {
+            color: #fff !important;
+        }
+    }
+}
+.order-btn-box{
+    overflow: hidden;
+    margin: 25px 10px 10px;
+}
+.order-g-btn{
+    @extend .order-common-btn;
+    background:url(../images/lechen/order-g-btn.png) no-repeat;
+    background-size: 100% 100%;
+    width:48%;
+    float:left;
+    margin: 0 0;
+    margin-right: 4%;
+    padding-right: 2%;
+}
+.order-y-btn{
+    @extend .order-common-btn;
+    background:url(../images/lechen/order-y-btn.png) no-repeat;
+    background-size: 100% 100%;
+    width:48%;
+    float:left;
+    margin: 0 0;
+    padding-right: 2%;
+}
+.order-more-btn{
+    @extend .order-common-btn;
+    background:url(../images/lechen/meetee-btn.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 10px 15px 15px;
+    a{
+        padding: 10px 0;
+    }
+}

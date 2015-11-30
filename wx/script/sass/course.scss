@@ -2,7 +2,7 @@
 @import "compass/css3";
 @import "compass/layout/stretching";
 $fontPrice:#03b8d5;
-$themeColor:#03b8d5;
+$themeColor:#ff6c00;
 
 /* coursePrimary 课程*/
 .coursePrimay{
@@ -42,6 +42,35 @@ $themeColor:#03b8d5;
                 margin-bottom: 10px;
                 display: block;
                 text-indent: 2rem;
+            }
+        }
+    }
+    .course_pure{
+        .course-pro{
+            padding: 5px 15px;
+        }
+        .course-song{
+            border:1px solid $themeColor;
+            padding: 10px;
+            margin: 10px;
+            .proPic{
+                width:60px;
+                height:60px;
+                float:left;
+                margin-right:10px;
+                img{
+                    height:100%;
+                }
+            }
+            h4{
+                color:$themeColor;
+                overflow:hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
+                display:block;
+            }
+            em{
+                margin-right:10px;
             }
         }
     }

@@ -1,8 +1,9 @@
+@charset "UTF-8";
 /* mentellLists */
 .menteel-bg {
   height: auto;
   width: auto;
-  background: url(../images/lib/mentee/listbg1.jpg) repeat-y;
+  background: url(../images/lib/img/view-bg0.jpg) repeat-y;
   background-size: 100%;
 }
 
@@ -148,10 +149,10 @@
   background-color: #fff;
   border-radius: 100%;
   text-align: center;
-  border: 2px solid #D8D8D8;
-  -moz-box-shadow: 0 0 3px #B0ACAC;
-  -webkit-box-shadow: 0 0 3px #B0ACAC;
-  box-shadow: 0 0 3px #B0ACAC;
+  border: 2px solid #f5ba8a;
+  -moz-box-shadow: 0 0 3px #f5ba8a;
+  -webkit-box-shadow: 0 0 3px #f5ba8a;
+  box-shadow: 0 0 3px #f5ba8a;
   zoom: 1;
   display: block;
 }
@@ -167,6 +168,114 @@
 }
 .menteel-mainList .btnplay.on span i {
   color: white;
+}
+
+/* 学员风采 */
+.mentee-mien {
+  background: url(../images/lib/img/meetee-bg_01.jpg) repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.mentee-heading {
+  margin: 10px 0;
+}
+.mentee-heading h3 {
+  color: #000;
+  font-size: 1.6rem;
+  margin: 0;
+}
+.mentee-heading span {
+  color: #696969;
+  font-size: 1.2rem;
+}
+
+.meetee-recommend {
+  background: url(../images/lib/img/meetee-box-bg_03.png) repeat 0 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+.meetee-recommend.label-gallery:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../images/lechen/label-g.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 300;
+}
+.meetee-recommend .meetee-lump {
+  background: url(../images/lib/img/meetee-box1.png) no-repeat 0 0, url(../images/lib/img/meetee-box3.png) no-repeat left bottom;
+  background-size: 100%;
+  padding: 12px 0;
+  position: relative;
+  z-index: 150;
+}
+.meetee-recommend .meetee-inner {
+  background: url(../images/lib/img/meetee-box2.png) repeat 0 0;
+  background-size: 100% 100%;
+  padding: 5px 15px;
+}
+.meetee-recommend .meetee-inner ul {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.meetee-recommend .meetee-inner li a {
+  position: relative;
+}
+.meetee-recommend .meetee-lists1 {
+  width: 100%;
+  height: 150px;
+}
+.meetee-recommend .meetee-lists1 li {
+  width: 30%;
+  height: 48%;
+  float: left;
+}
+.meetee-recommend .meetee-lists1 li a {
+  width: 100%;
+  height: 100%;
+}
+.meetee-recommend .meetee-lists1 li img {
+  height: 100%;
+}
+.meetee-recommend .meetee-lists1 li:last-child a:first-child {
+  margin-bottom: 8%;
+}
+.meetee-recommend .meetee-lists1 li:first-child {
+  width: 68%;
+  height: 100%;
+  margin-right: 2%;
+}
+.meetee-recommend .meetee-lists1 li:first-child .play-btn {
+  width: 60px;
+  height: 60px;
+}
+.meetee-recommend .meetee-lists2 li {
+  width: 33.33%;
+  float: left;
+  padding: 0 1px;
+}
+.meetee-recommend .meetee-lists2 li a, .meetee-recommend .meetee-lists2 li img {
+  width: 100%;
+  height: 100%;
+}
+.meetee-recommend .meetee-lists2 li:nth-of-type(2) a {
+  height: 48%;
+}
+.meetee-recommend .meetee-lists2 li:nth-of-type(2) a:first-child {
+  margin-bottom: 4%;
+}
+.meetee-recommend .play-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=menteePage.css.map */

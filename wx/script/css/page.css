@@ -55,4 +55,54 @@
   background-size: 100%;
 }
 
+.order-common-btn, .order-g-btn, .order-y-btn, .order-more-btn {
+  background: url(../images/lechen/order-btn.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 25px 15px 15px;
+}
+.order-common-btn a, .order-g-btn a, .order-y-btn a, .order-more-btn a {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 10px 0 15px 0;
+  font-weight: bold;
+  text-shadow: 2px 1px 2px #3D3D3D;
+}
+.order-common-btn a:hover, .order-g-btn a:hover, .order-y-btn a:hover, .order-more-btn a:hover, .order-common-btn a:focus, .order-g-btn a:focus, .order-y-btn a:focus, .order-more-btn a:focus, .order-common-btn a:visited, .order-g-btn a:visited, .order-y-btn a:visited, .order-more-btn a:visited, .order-common-btn a:focus, .order-g-btn a:focus, .order-y-btn a:focus, .order-more-btn a:focus {
+  color: #fff !important;
+}
+
+.order-btn-box {
+  overflow: hidden;
+  margin: 25px 10px 10px;
+}
+
+.order-g-btn {
+  background: url(../images/lechen/order-g-btn.png) no-repeat;
+  background-size: 100% 100%;
+  width: 48%;
+  float: left;
+  margin: 0 0;
+  margin-right: 4%;
+  padding-right: 2%;
+}
+
+.order-y-btn {
+  background: url(../images/lechen/order-y-btn.png) no-repeat;
+  background-size: 100% 100%;
+  width: 48%;
+  float: left;
+  margin: 0 0;
+  padding-right: 2%;
+}
+
+.order-more-btn {
+  background: url(../images/lechen/meetee-btn.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 10px 15px 15px;
+}
+.order-more-btn a {
+  padding: 10px 0;
+}
+
 /*# sourceMappingURL=page.css.map */
