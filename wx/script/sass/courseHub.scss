@@ -95,6 +95,9 @@ $main-grey:#333;
             }
             .param-del{
                 color: #03b8d5;
+                i{
+                    -webkit-text-stroke-width: 0;
+                }
             }
             dd{
                 display: block;
@@ -112,7 +115,7 @@ $main-grey:#333;
                 .font-state{
                     display:table-cell;
                     vertical-align: middle;
-                    min-width:150px;
+                    min-width:120px;
                 }
                 .state-operate{
                     @extend .font-state;
@@ -158,6 +161,9 @@ $main-grey:#333;
             .pri-cont{
                 display:block;
                 white-space:nowrap;
+                .comment-rating{
+                    width:100px !important;
+                }
             }
         }
     }

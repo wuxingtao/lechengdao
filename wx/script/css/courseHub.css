@@ -76,6 +76,9 @@
 .coursehub-wrapper .course-lists .courseInfo .param-del {
   color: #03b8d5;
 }
+.coursehub-wrapper .course-lists .courseInfo .param-del i {
+  -webkit-text-stroke-width: 0;
+}
 .coursehub-wrapper .course-lists .courseInfo dd {
   display: block;
   overflow: hidden;
@@ -91,7 +94,7 @@
 .coursehub-wrapper .course-lists .courseInfo .infoState .font-state, .coursehub-wrapper .course-lists .courseInfo .infoState .state-operate {
   display: table-cell;
   vertical-align: middle;
-  min-width: 150px;
+  min-width: 120px;
 }
 .coursehub-wrapper .course-lists .courseInfo .infoState .state-operate {
   width: 100%;
@@ -131,6 +134,9 @@
 .coursehub-wrapper .course-box .privatCont .pri-cont {
   display: block;
   white-space: nowrap;
+}
+.coursehub-wrapper .course-box .privatCont .pri-cont .comment-rating {
+  width: 100px !important;
 }
 
 /*# sourceMappingURL=courseHub.css.map */

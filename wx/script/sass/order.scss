@@ -45,6 +45,11 @@ $gray:#333;
         margin: 5% 0;
         color: #000;
     }
+    .lc-time{
+        font-size:1.3rem;
+        white-space:nowrap;
+        margin: 10px 0;
+    }
     .order-message {
         position: relative;
         padding-left: 90px;
@@ -64,6 +69,7 @@ $gray:#333;
         .state-text {
             display: block;
             line-height: 2rem;
+            white-space:nowrap;
         }
     }
     .order-rate-message {
@@ -98,6 +104,54 @@ $gray:#333;
         margin: 2% 0;
     }
 }
+.order-cancel-wrapper{
+    .order-message{
+        padding-left: 75px;
+        .state-text{
+            line-height:1.8rem;
+            font-size: 1.2rem;
+        }
+    }
+    .order-box{
+        padding-left:17%;
+    }
+    .select-box{
+        padding:0 10px;
+        margin-top: 10%;
+    }
+    .select_ui{
+        width:100%;
+        border-radius: 4px;
+        background-color: #ff7902;
+        color: #fff;
+        text-align: center;
+        padding: 6px;
+        @include box-shadow(0 1px 3px #be5900);
+        border: 0;
+        .select_text_ui{
+            border-right: 1px solid #dfac80;
+        }
+        .select_arrow{
+            background: url(../images/icon-gray/select-arrow.png) no-repeat;
+            background-size: 100% 100%;
+            width: 12px;
+            height: 6px;
+            top: 15px;
+            right: 6px;
+            border: 0;
+            margin: 0;
+
+        }
+        select{
+            background-color: #ffeedf;
+            color:#434343;
+            text-align:center;
+            option{
+                text-align:center;
+            }
+        }
+    }
+}
 
 //order-btn
 .order-common-btn {
@@ -120,6 +174,12 @@ $gray:#333;
     }
 }
 
+.fix-bt-order{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
 /* 评价 */
 

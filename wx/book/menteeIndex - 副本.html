@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>学员主页</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/plugin/iconfont/qiqi-iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/menteePage.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagefull pagebar menteel-bg">
+    <div class="vwport p0 m-wrapper menteel-lists menteel-plugin">
+        <div class="meteel-item">
+            <a href="">
+                <div class="meteel-lump">
+                    <div class="proPhoto"><img src="../script/images/lib/mentee/images/head1_03.jpg" alt=""></div>
+                    <div class="privatCont">
+                        <dl>
+                            <dt><span>余晓丹</span></dt>
+                            <dd>爱笑的女孩运气不会太坏，从事海外 投资工作的余晓丹，在乐橙岛实现了 自己的钢琴梦。</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="menteel-mainList">
+            <ul>
+                <li class="artist-song" stat="../script/source/01.mp3">
+                    <div class="theme-img"><img src="../script/images/lib/mentee/images/media-img1_03.png" alt=""></div>
+                    <div class="privatCont">
+                        <div class="song-cont">
+                            <h3>《街道的寂寞》</h3>
+                            <p>2015年10月6日</p>
+                        </div>
+                        <div class="btnplay"><span stat="xt1"><i class="qi-iconfont">&#xe617;</i></span></div>
+                    </div>
+                </li>
+                <li class="artist-song" stat="../script/source/02.mp3">
+                    <div class="theme-img"><img src="../script/images/lib/mentee/images/media-img1_03.png" alt=""></div>
+                    <div class="privatCont">
+                        <div class="song-cont">
+                            <h3>《街道的寂寞街道的寂寞街道的寂寞街道的寂寞》</h3>
+                            <p>2015年10月6日</p>
+                        </div>
+                        <div class="btnplay"><span><i class="qi-iconfont">&#xe617;</i></span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="group-lists">
+        <audio  id="audio" controls="controls">
+            <source src="">
+        </audio>
+    </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/music/js/all.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script>
+// playOrPaused('f1',this);
+
+$(function(){
+    // var musicSrc="../script/source/01.mp3";
+    $(".btnplay").on("click",function(){
+        var musicSrc=$(this).parents(".artist-song").attr("stat")
+
+        var listlen=$(".menteel-mainList li").length;
+
+        if($(this).hasClass("on")){
+            $(this).removeClass("on")
+            audio.pause();
+        }else{
+            $(this).addClass("on").parents(".artist-song").siblings().find(".btnplay").removeClass("on");
+            if(listlen!==0){
+                $("#audio").attr("src",""+musicSrc+"")
+                playOrPaused('f1',this)
+            }
+        }
+
+
+    })
+
+
+})
+
+var audio;
+window.onload = function() {
+    initAudio();
+}
+var initAudio = function() {
+    //audio = document.createElement("audio")
+    //audio.src='Never Say Good Bye.ogg'
+    audio = document.getElementById('audio');
+
+}
+
+function getCurrentTime(id) {
+    alert(parseInt(audio.currentTime) + '：秒');
+}
+
+function playOrPaused(id, obj) {
+    if (audio.paused) {
+        audio.play();
+        // obj.innerHTML = '暂停';
+        return;
+    }
+    audio.pause();
+    // obj.innerHTML = '播放';
+}
+
+    </script>
+</body>
+
+</html>

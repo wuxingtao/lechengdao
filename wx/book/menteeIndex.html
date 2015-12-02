@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../script/css/general.css">
     <link rel="stylesheet" type="text/css" href="../script/plugin/iconfont/qiqi-iconfont.css">
     <link rel="stylesheet" type="text/css" href="../script/css/menteePage.css">
+
     <style>
 
     </style>
@@ -32,7 +33,8 @@
                 </div>
             </a>
         </div>
-        <div class="menteel-mainList">
+        <!-- 歌曲列表 -->
+        <div class="menteel-mainList" id="content"> 
             <ul>
                 <li class="artist-song" stat="../script/source/01.mp3">
                     <div class="theme-img"><img src="../script/images/lib/mentee/images/media-img1_03.png" alt=""></div>
@@ -57,65 +59,46 @@
             </ul>
         </div>
     </div>
-    <div class="group-lists">
-        <audio  id="audio" controls="controls">
+    <section id="playwrap">
+            <div id="playContent">
+                <div>
+                    <audio id="myMusic" src="null"></audio>
+                </div>
+                <div onclick="myControl.selectTime(event)" id="progressWrap">
+                    <div id="progress"></div>
+                </div>
+                <div class="img">
+                    <img id="singerHead" src="">
+                </div>
+                <div class="info">
+                    <div class="songname clearfix">
+                        <label id="musicTitle" for="musicTitle"></label>
+                        <label style="display: none;" id="songname" for="songname">此手机不支持html5播放，扔了吧</label>
+                        <label id="timeshow" for="time"><span id="currentTime">00:00</span>/<span id="totleTime">00:00</span></label>
+                    </div>
+                    <div class="audioControl">
+                        <a id="prevButton" class="last" onclick="myControl.prev()" href="javascript:;"></a>
+                        <a id="playButton" class="play" onclick="myControl.mainControl()" href="javascript:;"></a>
+                        <a id="nextButton" class="next" onclick="myControl.next()" href="javascript:;"></a>
+                        <a class="border"></a>
+                        <a id="playDetail" class="showDetail" href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div class="group-lists hide">
+        <audio  id="myaudio" controls="controls">
             <source src="">
         </audio>
     </div>
+    <section class="zoom-footerBox bgw">
+            <div class="pb-standard"></div>
+        </section>
     <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/music/js/all.js"></script>
     <script src="../script/js/global.js"></script>
     <script src="../script/js/web.js"></script>
     <script>
-// playOrPaused('f1',this);
-
-$(function(){
-    // var musicSrc="../script/source/01.mp3";
-    $(".btnplay").on("click",function(){
-        var musicSrc=$(this).parents(".artist-song").attr("stat")
-
-        var listlen=$(".menteel-mainList li").length;
-
-        if($(this).hasClass("on")){
-            $(this).removeClass("on")
-            audio.pause();
-        }else{
-            $(this).addClass("on").parents(".artist-song").siblings().find(".btnplay").removeClass("on");
-            if(listlen!==0){
-                $("#audio").attr("src",""+musicSrc+"")
-                playOrPaused('f1',this)
-            }
-        }
-
-
-    })
-
-
-})
-
-var audio;
-window.onload = function() {
-    initAudio();
-}
-var initAudio = function() {
-    //audio = document.createElement("audio")
-    //audio.src='Never Say Good Bye.ogg'
-    audio = document.getElementById('audio');
-
-}
-
-function getCurrentTime(id) {
-    alert(parseInt(audio.currentTime) + '：秒');
-}
-
-function playOrPaused(id, obj) {
-    if (audio.paused) {
-        audio.play();
-        // obj.innerHTML = '暂停';
-        return;
-    }
-    audio.pause();
-    // obj.innerHTML = '播放';
-}
 
     </script>
 </body>

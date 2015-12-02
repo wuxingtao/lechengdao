@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>个人资料</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" href="../script/plugin/timepick/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/course.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/order.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/member.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="mhome pagebar course-enroll-wrapper" data-share="true">
+    <div class="vwport p0 m-wrapper member-info-wrapper">
+        <div class="order-info-heading">
+            <div class="proInfo"><img src="../script/images/lechen/form_logo.png" alt=""></div>
+        </div>
+        <form action="" class="course-enroll">
+            <dl>
+                <dt class="form-title">个人资料</dt>
+                <dd>
+                    <input type="text" class="form-control" placeholder="您的姓名" value="宁冰冰">
+                </dd>
+                <dd>
+                    <input type="tel" class="form-control m-phone" name="tel" placeholder="您的电话" readonly="readonly" value="13800138000">
+                    <span class="unbind-phone"><a href class="btn">更换绑定手机</a></span>
+                </dd>
+                <dd>
+                    <input type="text" class="form-control form_datetime" readonly="readonly" placeholder="您的出生日期" id="startTime" value="1992-5-3">
+                    <input type="hidden" name="startTime">
+                </dd>
+                <dd class="sex">
+                    <label class="sex-item sel">
+                        <i class="icon-xt-check"></i>
+                        <input type="hidden" id="sexInput" value="先生" name="sex">
+                        <em>先生</em>
+                    </label>
+                    <label class="sex-item">
+                        <i class="icon-xt-check"></i>
+                        <em>女士</em>
+                    </label>
+                </dd>
+            </dl>
+        </form>
+    </div>
+    <div class="order-common-btn order-btn"><a href="" class="btn">保存</a></div>
+    <div id="datePlugin"></div>
+    <!-- phonemode -->
+    <div class="phone-box hide">
+        <form class="receive-success">
+            <input type="tel" name="phone" placeholder="请输入新的手机号" class="form-control">
+            <div class="state-option">
+                <input type="text" placeholder="请输入验证码" class="form-control">
+                <span><a class="btn">发送验证码</a></span>
+            </div>
+            <a class="btn btn-full-orange unbindSubmit">保存</a>
+            <div class="close-btn0 btn"><img src="../script/images/member/point/check-btn1.png"></div>
+        </form>
+    </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script src="../script/plugin/timepick/js/date.js"></script>
+    <script src="../script/plugin/timepick/js/iscroll.js"></script>
+    <script>
+    $(function() {
+        $(".sex").on("click", ".sex-item", function() {
+            $(this).addClass("sel").siblings().removeClass("sel")
+            $("#sexInput").val($(this).find("em").html())
+        })
+    })
+
+    //datepick
+    $('#startTime').date({
+        theme: "datetime"
+    });
+    //手机绑定
+    var pe=$(".phone-box").html();
+    $(".phone-box").remove();
+    $(".unbind-phone .btn").on("click",function(e){
+        e.preventDefault();
+        var cou0 = layer.open({
+            type: 1,
+            content: pe,
+            className:"unbindP",
+            shade: false,
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn0").click(function() {
+                    layer.close(cou0);
+                    $("body").removeClass("model-open")
+                })
+                $(".unbindSubmit").click(function(){
+                    var subphone=$(".unbindP input[name='phone']").val();
+                    $(".m-phone").val(subphone)
+                    layer.close(cou0);
+                })
+
+            }
+        })
+        console.log(111)
+    })
+
+    //保存
+    $(".order-btn").on("click", function(event) {
+        event.preventDefault();
+        var common = "<div class=\"receive-success plt10\"><img src=\"../script/images/member/point/check_layer.png\" class=\"check-true\"><span class=\"form-success\">保存成功</span><a class=\"btn btn-full-orange btn-share\">邀请好友加入乐橙岛</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\">"
+        common += "</div></div>"
+
+
+        var cou1 = layer.open({
+            type: 1,
+            content: common,
+            shade: false,
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn").click(function() {
+                    layer.close(cou1);
+                    $("body").removeClass("model-open")
+                })
+                $(".btn-share").on("click", function(e) {
+                    e.preventDefault();
+                    layer.close(cou1)
+                    sharelog();
+                })
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

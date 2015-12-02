@@ -1,12 +1,25 @@
 @charset "UTF-8";
 /* xt-personal mix */
 /* index */
-.index_wrapper .le-content {
+.lechen-lattice {
   background: url(../images/lechen/index_bg_02.png) repeat-y;
-  background-size: 100%;
+  background-size: 100% 100%;
+}
+
+.index_wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 110px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.index_wrapper .le-content {
+  background: url(../images/lechen/index_bg_04.png) repeat-y;
+  background-size: 100% 100%;
+  position: relative;
 }
 .index_wrapper .le-content .le-lump {
-  background: url(../images/lechen/index_bg_02.png) repeat-y;
   background-size: 100%;
   padding: 5px;
   position: relative;
@@ -105,10 +118,23 @@
 }
 .index_wrapper .le-foot {
   z-index: 200;
-  position: relative;
   background: url(../images/lechen/lc_food_02.png) no-repeat;
   background-size: 100% 100%;
   height: 150px;
+  position: absolute;
+  bottom: -110px;
+  left: 0;
+  right: 0;
+}
+.index_wrapper .le-foot span {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: #34163e;
+  font-weight: bold;
 }
 
 /* img-bg */
@@ -454,6 +480,245 @@
   padding: 5px 0;
   line-height: 1rem;
   font-size: 1.2rem;
+}
+
+/* music-play */
+.xt-music-wrapper {
+  background: url(../images/lib/view/view-play-bg.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.xt-music-wrapper .listen-cd-box .inner-img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 35px auto 10px;
+  background: url(../images/lib/view/view-outer-cd.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.xt-music-wrapper .listen-cd-box .inner-img img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 100%;
+  width: 50%;
+  height: 50%;
+}
+.xt-music-wrapper .play-cd input {
+  display: none;
+}
+.xt-music-wrapper .start:checked ~ .listen-cd-box .inner-img {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+.xt-music-wrapper .stop:checked ~ .listen-cd-box .inner-img {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.xt-music-wrapper .reset:checked ~ .listen-cd-box .inner-img {
+  animation: rotate 25s linear 0s normal none infinite;
+  -webkit-animation: rotate 25s linear 0s normal none infinite;
+}
+.xt-music-wrapper .play-running {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+.xt-music-wrapper .play-pausing {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.wave-pic {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.music-player {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.music-player img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+.music-player .timeFormat {
+  text-align: center;
+  color: #ff7800;
+  margin-bottom: 10px;
+}
+.music-player .timeFormat div {
+  display: inline-block;
+  font-size: 1.3rem;
+}
+.music-player .info {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0 10px;
+}
+.music-player .info .jp-playlist li {
+  display: none;
+}
+.music-player .info .jp-playlist li a {
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  color: rgba(225, 225, 225, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+.music-player .info .jp-playlist li a span {
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+.music-player .info .jp-playlist li.jp-playlist-current {
+  display: block;
+}
+.music-player .info .jp-playlist li .jp-free-media, .music-player .info .jp-playlist li .jp-playlist-item-remove {
+  display: none;
+}
+.music-player .info .left {
+  width: 25px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.music-player .info .right {
+  width: 25px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  left: auto;
+  right: 30px;
+}
+.music-player .info [class^="icon-"] {
+  margin: 0 0 10px;
+}
+.music-player .progress, .music-player .volume-level {
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #c8b6b0;
+  position: absolute;
+  bottom: 0px;
+  cursor: pointer;
+  overflow: initial;
+}
+.music-player .progress span, .music-player .volume-level span {
+  position: relative;
+  display: block;
+  background: #f28c33;
+  width: 0%;
+  height: 5px;
+}
+.music-player .progress span:after, .music-player .volume-level span:after {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/lib/view/wave-progress.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.music-player .controls {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+}
+.music-player .controls .current {
+  padding: 15px 0 20px;
+  color: #ff7800;
+  font-size: 1.2rem;
+}
+.music-player .controls .play-controls a {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 30px;
+  color: #fff;
+}
+.music-player .controls .play-controls a:hover, .music-player .controls .play-controls a:focus, .music-player .controls .play-controls a:active, .music-player .controls .play-controls a:visited {
+  color: #fff !important;
+}
+.music-player .controls .play-controls a i {
+  font-size: 3.5rem;
+}
+.music-player .controls .play-controls a.jp-play i {
+  font-size: 5rem;
+}
+.music-player .controls .play-controls a.jp-pause i {
+  font-size: 3.6em;
+}
+.music-player .controls .lb-center {
+  width: 50px;
+  height: 71px;
+}
+
+.cdPlay {
+  animation: rotate 25s linear 0s normal none infinite;
+  -webkit-animation: rotate 25s linear 0s normal none infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .index_wrapper {
+    bottom: 40px;
+  }
+
+  .xt-music-wrapper .inner-img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .xt-music-wrapper .music-player {
+    height: 220px !important;
+  }
+}
+@media only screen and (min-device-width: 400px) {
+  .xt-music-wrapper .inner-img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .xt-music-wrapper .music-player {
+    height: 280px !important;
+  }
 }
 
 /*# sourceMappingURL=web.css.map */

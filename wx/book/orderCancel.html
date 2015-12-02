@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>取消预约</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/course.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/order.css">
+</head>
+
+<body class="mhome pagebar" data-share="true">
+    <div class="vwport p0 m-wrapper order-cancel-wrapper">
+        <div class="order-info-heading">
+            <div class="imageInfo"><img src="../script/images/lechen/order-infobg3.png" alt=""></div>
+            <div class="order-subject">预约详情</div>
+            <div class="order-box fl">
+                <h3 class="lc-time">预约时间：12月24日 13：00-14：00</h3>
+                <div class="order-message">
+                    <div class="order-thumb"><img src="../script/images/lechen/images/thumb-order1_03.png" alt=""></div>
+                    <span class="state-text">乐橙岛钢琴吧（南山店）</span>
+                    <span class="state-text">指定老师：姜东浩</span>
+                    <span class="state-text">课程：《卡农》</span>
+                </div>
+            </div>
+        </div>
+        <div class="select-box"><select class="form-control" id="">
+                <option value="">取消原因</option>
+                <option value="">1.不想预约了</option>
+                <option value="">2.有其他安排</option>
+                <option value="">3.没有时间</option>
+            </select></div>
+
+    </div>
+    <div class="order-common-btn order-btn fix-bt-order"><a href="" class="btn">确认取消</a></div>
+
+    <div id="datePlugin"></div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/js/jquery.selectui.min.js"></script>
+    <script src="../script/plugin/layer/layer.m.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+<script>
+jQuery(function($) {
+    $("select").not(".native select").selectui({
+        autoWidth: true,
+        interval: true
+    });
+});
+    //预约提醒
+    $(".order-btn").on("click", function(event) {
+        event.preventDefault();
+        var common = "<div class=\"receive-success plt10\"><img src=\"../script/images/member/point/check_layer.png\" class=\"check-true\"><span class=\"form-success\">报名成功<br/>请您在活动开始前到达门店，参与活动</span><a class=\"btn btn-full-orange btn-share\">把好消息推送给好友</a><div class=\"close-btn btn\"><img src=\"../script/images/member/point/check-btn1.png\">"
+        common += "</div></div>"
+
+
+        var cou1 = layer.open({
+            type: 1,
+            content: common, 
+            shade:false,
+            style: 'width:80%;background-color:rgba(0,0,0,.8);border-radius:6px;',
+            success: function() {
+                $("body").addClass("model-open")
+                $(".close-btn").click(function() {
+                    layer.close(cou1);
+                    $("body").removeClass("model-open")
+                })
+                $(".btn-share").on("click", function(e) {
+                    e.preventDefault();
+                    layer.close(cou1)
+                    sharelog();
+                })
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

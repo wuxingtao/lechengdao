@@ -147,12 +147,12 @@
   margin: 10px;
   font-size: 1.2rem;
 }
-.receive-success .close-btn {
+.receive-success .close-btn, .receive-success .close-btn0 {
   position: absolute;
   top: 0;
   right: 0;
 }
-.receive-success .close-btn img {
+.receive-success .close-btn img, .receive-success .close-btn0 img {
   width: 20px;
   height: 20px;
 }

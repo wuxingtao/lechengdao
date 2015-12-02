@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zn-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>音频播放</title>
+    <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/general.css">
+    <link rel="stylesheet" type="text/css" href="../script/plugin/iconfont/qiqi-iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../script/css/web.css">
+</head>
+
+<body class="mhome pagefull pagebar xt-music-wrapper">
+    <div class="vwport p0 m-wrapper">
+        <div class="play-cd">
+            <input id="start" class="start" type="radio" name="controls">
+            <input id="stop" class="stop" type="radio" name="controls">
+            <input id="reset" class="reset" type="radio" name="controls">
+            <div class="listen-cd-box">
+                <div class="inner-img cdPlay"><img src="../script/images/lib/view/view-inner-img_03.png" alt=""></div>
+            </div>
+        </div>
+        <div class="music-player jp-video-270p">
+            <!--<div style="background-image: url(http://i.imgur.com/yqB0erk.jpg);" class="album"></div>-->
+            <div class="timeFormat">
+                <div class="current jp-current-time"></div>
+                <div>/</div>
+                <div class="jp-duration"></div>
+            </div>
+            <div class="info">
+                <div class="center">
+                    <div class="jp-playlist">
+                        <ul style="display: block;">
+                        </ul>
+                    </div>
+                </div>
+                <div class="progress jp-seek-bar" style="width: 100%;">
+                    <span class="jp-play-bar" style="width: 0%;"></span>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="play-controls">
+                    <a href="javascript:;" class="icon-previous jp-previous" title="previous"><i class="qi-iconfont relative-font">&#xe61b;</i></a>
+                    <a href="javascript:;" class="icon-play jp-play" title="play" style="display: inline-block;">
+                        <i class="qi-iconfont">&#xe630;</i>
+                    </a>
+                    <a href="javascript:;" class="icon-pause jp-pause" title="pause" style="display: none;">
+                        <i class="qi-iconfont">&#xe61a;</i>
+                    </a>
+                    <a href="javascript:;" class="icon-next jp-next" title="next">
+                        <label for="reset"><i class="qi-iconfont">&#xe61b;</i></label>
+                    </a>
+                </div>
+            </div>
+            <div id="jquery_jplayer" class="jp-jplayer" style="width: 480px; height: 270px;"><img id="jp_poster_0" src="http://31.media.tumblr.com/810b1125a8b9e9f192d009ef58dceb07/tumblr_nbe8wsmKuz1rknpqyo1_500.jpg" style="width: 480px; height: 270px; display: none;">
+                <audio id="jp_audio_0" preload="metadata" src="http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"></audio>
+                <video id="jp_video_0" preload="metadata" style="width: 0px; height: 0px;"></video>
+            </div>
+        </div>
+        <div class="wave-pic"><img src="../script/images/lib/view/wave_bg_02.png" alt=""></div>
+    </div>
+    <script src="../script/js/jquery.min.js"></script>
+    <script src="../script/plugin/jxPlayer/js/jquery.jplayer.min.js"></script>
+    <script src="../script/plugin/jxPlayer/js/jplayer.playlist.min.js"></script>
+    <script src="../script/js/global.js"></script>
+    <script src="../script/js/web.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        var playlist = [{
+            title: "平凡之路",
+            artist: "朴树",
+            mp3: "http://sc1.111ttt.com:8282/2014/1/09m/24/2242313311.m4a?tflag=1448971479&pin=e78788b8f44f52e9d4d50d8da3203188&ip=183.12.67.32",
+            poster: "http://33.media.tumblr.com/bf9dc125a47dcca91ce5b3575bc3ba92/tumblr_nbmb3j8nU51sq3g2zo1_500.png"
+        }, {
+            title: "佩恩佩恩佩恩佩恩佩恩佩恩佩恩佩恩佩恩佩恩佩恩佩恩",
+            artist: "佩恩",
+            mp3: "http://sc1.111ttt.com:8282/2015/5/12/01/105011937223.mp3?tflag=1448971360&pin=0c3bf6aa5300ad55fa74aee525938ed4&ip=183.12.67.32",
+            //oga:"http://www.jplayer.org/audio/ogg/Miaow-02-Hidden.ogg",
+            poster: "http://33.media.tumblr.com/0b35eb42176eedbf4a96e52efa760875/tumblr_mxp7a0v3fr1rqx86wo1_500.png"
+        }, {
+            title: "INTRO _ Never Mind (Live)",
+            artist: "防弹少年团",
+            mp3: "http://sc1.111ttt.com:8282/2015/1/12/01/105012019065.mp3?tflag=1449034680&pin=fb661c31f6413e6e012e70ab75b48084&ip=183.49.10.50#.mp3",
+            m4a: "",
+            oga: "",
+            poster: "http://31.media.tumblr.com/810b1125a8b9e9f192d009ef58dceb07/tumblr_nbe8wsmKuz1rknpqyo1_500.jpg"
+        }];
+
+        var cssSelector = {
+            jPlayer: "#jquery_jplayer",
+            cssSelectorAncestor: ".music-player"
+        };
+
+        var options = {
+            swfPath: "http://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/jquery.jplayer/Jplayer.swf",
+            supplied: "ogv, m4v, oga, mp3"
+        };
+
+        var myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
+
+
+        //cdplay
+        $(".jp-play").on("click", function() {
+            $(".listen-cd-box .inner-img").removeClass("play-pausing").addClass("play-running")
+        })
+        $(".jp-pause").on("click", function() {
+            $(".listen-cd-box .inner-img").removeClass("play-running").addClass("play-pausing")
+        })
+
+    });
+    </script>
+</body>
+
+</html>
