@@ -11,6 +11,10 @@ $gray:#333;
 .lechen-lattice{
     background: url(../images/lechen/index_bg_02.png) repeat-y;
     background-size: 100% 100%;
+    .le-top{
+        position: relative;
+        z-index: 200;
+    }
 }
 .index_wrapper {
     position: fixed;
@@ -19,6 +23,7 @@ $gray:#333;
     bottom: 110px;
     max-width: 640px;
     margin: 0 auto;
+    z-index: 100;
     .le-content {
         // background:url(../images/lechen/index_bg_03.png) no-repeat left bottom;
         // background-size: 100%;

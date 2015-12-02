@@ -5,14 +5,14 @@
   background: url(../images/member/course/tab-bg.png) no-repeat 0 0;
   background-size: 100% 100%;
 }
-.coursehub-wrapper #courseTab {
+.coursehub-wrapper #courseTab, .coursehub-wrapper #commetNav {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flex;
   display: flex;
   margin-bottom: 10px;
 }
-.coursehub-wrapper #courseTab li {
+.coursehub-wrapper #courseTab li, .coursehub-wrapper #commetNav li {
   position: relative;
   color: #fff;
   text-align: center;
@@ -22,29 +22,19 @@
   -ms-flex: 1;
   flex: 1;
 }
-.coursehub-wrapper #courseTab li a:hover {
+.coursehub-wrapper #courseTab li a:hover, .coursehub-wrapper #commetNav li a:hover {
   background-color: #ff7902;
   color: #fff !important;
   border: 1px solid transparent;
   border-radius: 0;
 }
-.coursehub-wrapper #courseTab li.active a {
+.coursehub-wrapper #courseTab li.active a, .coursehub-wrapper #commetNav li.active a {
   background-color: #ff7902;
   color: #fff !important;
   border: 1px solid transparent;
   border-radius: 0;
 }
-.coursehub-wrapper #courseTab li:nth-of-type(2):before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 80%;
-  top: 3px;
-  bottom: 0;
-  left: -1px;
-  background-color: #fff;
-}
-.coursehub-wrapper #courseTab li:nth-of-type(2):after {
+.coursehub-wrapper #courseTab li:not(:last-child):after, .coursehub-wrapper #commetNav li:not(:last-child):after {
   content: '';
   position: absolute;
   width: 1px;
@@ -71,6 +61,7 @@
   padding: 0 0;
 }
 .coursehub-wrapper .course-lists .courseInfo dt {
+  font-weight: normal;
   border-bottom: 1px solid #e5e5e5;
 }
 .coursehub-wrapper .course-lists .courseInfo .param-del {
@@ -137,6 +128,28 @@
 }
 .coursehub-wrapper .course-box .privatCont .pri-cont .comment-rating {
   width: 100px !important;
+}
+
+/* commentHub */
+.commentRecord-lists .comment-lists li {
+  margin-bottom: 10px;
+}
+.commentRecord-lists .comment-lists .param-del {
+  color: #03b8d5;
+}
+.commentRecord-lists .commentInfo {
+  background-color: #fff;
+}
+.commentRecord-lists .commentInfo dt {
+  font-weight: normal;
+  border-bottom: 1px solid #e5e5e5;
+}
+.commentRecord-lists .commentInfo .comment-box {
+  padding: 10px;
+}
+.commentRecord-lists .commentInfo .comment-box .comment-text > .pull-left {
+  color: #a76841;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=courseHub.css.map */

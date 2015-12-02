@@ -26,9 +26,9 @@
                 <li><a href="#tabState3" data-toggle="tab">剩余课程<em>5</em></a></li>
             </ul>
         </div>
-        <div class="tab-content xt-content">
+        <div class="tab-content">
             <div id="tabState1" class="tab-pane fade active in">
-                <div class="course-list-main">
+                <div class="course-list-main xt-content">
                     <ul class="course-lists">
                         <li class="item event-state1">
                         <!-- event-state1，2，3订单状态 -->
@@ -48,7 +48,7 @@
                                     <span class="font-state">订单状态：<em>未完成</em></span>
                                     <div class="state-operate">
                                         <span class="item1 btn">课程分享</span>
-                                        <span class="item2 btn"><a href="../book/orderCancel.html">取消预约</a></span>
+                                        <span class="item2 btn">取消预约</span>
                     <!--                     <span class="item3 btn"><a href=""></a></span> -->
                                     </div>
                                 </dd>
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div id="tabState2" class="tab-pane fade">
-                <div class="course-list-main">
+                <div class="course-list-main xt-content">
                     <ul class="course-lists">
                         <li class="item event-state2">
                             <dl class="courseInfo">
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div id="tabState3" class="tab-pane fade">
-                <div class="course-list-main">
+                <div class="course-list-main xt-content">
                     <ul class="course-lists"></ul>
                 </div>
             </div>
@@ -151,7 +151,7 @@
     $(function(){
 
         //scroll
-        $('.xt-content .course-lists').infinitescroll({
+        $('.xt-content').infinitescroll({
             loading: {
                 msgText: "",
                 img: "../script/images/icon-gray/loading.gif",
@@ -175,12 +175,6 @@
         }, function(newElements, data, url) { //回调函数
             //console.log(data);
             //alert(url);
-            //del
-            $(".course-lists .param-del").on("click",function(){
-                $(this).parents(".courseInfo").fadeOut("1000",function(){
-                    $(this).parents(".item").remove();
-                });
-            })
         });
 
         //del
